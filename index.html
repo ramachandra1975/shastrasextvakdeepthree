@@ -1,0 +1,1802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nāṭyaśāstra I: Rasa and the Architecture of Emotion · Series B · Part Four · Cultural Musings</title>
+<style>
+:root{
+  --bg:#0c0a08;
+  --bg-paper:#13100d;
+  --bg-card:#181410;
+  --ink:#ece3d4;
+  --ink-dim:#b8ad9a;
+  --ink-faint:#7d7263;
+  --accent:#c9933f;
+  --accent-soft:#8a6a3a;
+  --accent-deep:#5e3f1f;
+  --rule:#2c241c;
+  --sanskrit:#e0b873;
+  --serif:'Tinos','Georgia','Times New Roman',serif;
+  --display:'Spectral','Georgia',serif;
+  --max:780px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);
+  font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-deep);}
+a:hover{color:var(--sanskrit);border-bottom-color:var(--accent);}
+
+header.masthead{
+  text-align:center;padding:64px 24px 40px;border-bottom:1px solid var(--rule);
+  background:radial-gradient(ellipse at top, #1b150e 0%, var(--bg) 70%);
+}
+.brand{letter-spacing:.22em;font-size:13px;color:var(--ink-faint);text-transform:uppercase;}
+.platform-sub{font-size:13px;color:var(--ink-faint);margin-top:4px;}
+.series-tag{margin-top:28px;font-size:14px;color:var(--accent);letter-spacing:.08em;text-transform:uppercase;}
+.devanagari-strip{font-size:15px;color:var(--sanskrit);margin-top:10px;letter-spacing:.04em;}
+
+nav.toc{max-width:var(--max);margin:36px auto 0;padding:0 24px;text-align:center;font-size:14px;line-height:2.1;}
+nav.toc a{margin:0 10px;color:var(--ink-dim);border-bottom:1px dotted var(--accent-deep);}
+nav.toc a:hover{color:var(--sanskrit);}
+
+nav.allparts{
+  max-width:var(--max);margin:18px auto 0;padding:18px 24px 0;border-top:1px solid var(--rule);
+  text-align:center;font-size:13.5px;color:var(--ink-faint);line-height:1.9;
+}
+nav.allparts .current{color:var(--accent);font-weight:600;}
+nav.allparts a{color:var(--ink-dim);border-bottom:1px dotted var(--rule);}
+
+main{max-width:var(--max);margin:0 auto;padding:0 24px 80px;}
+
+.title-block{padding:56px 0 24px;text-align:center;}
+.title-block .kicker{font-size:14px;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:18px;}
+.title-block h1{font-family:var(--display);font-size:42px;line-height:1.18;font-weight:600;margin:0 0 18px;color:#f4ead8;}
+.title-block h2.subtitle{font-family:var(--serif);font-style:italic;font-weight:400;font-size:21px;color:var(--ink-dim);margin:0 0 30px;line-height:1.5;}
+.meta-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:28px;font-size:14px;color:var(--ink-faint);margin-top:18px;}
+.meta-grid b{color:var(--ink-dim);font-weight:600;}
+
+.ornament{text-align:center;color:var(--accent-soft);font-size:20px;margin:40px 0;letter-spacing:.4em;}
+
+section.context-box, section.preview-box{
+  background:var(--bg-card);border:1px solid var(--rule);border-radius:4px;padding:32px 32px;margin:32px 0;
+}
+section.context-box h3, section.preview-box h3{font-family:var(--display);color:var(--sanskrit);font-size:20px;margin-top:0;}
+section.context-box h4, section.preview-box h4{font-size:16px;color:var(--ink-dim);margin:24px 0 8px;text-transform:uppercase;letter-spacing:.06em;}
+
+table.partmap{width:100%;border-collapse:collapse;margin:20px 0;font-size:15px;}
+table.partmap th, table.partmap td{border:1px solid var(--rule);padding:10px 12px;text-align:left;vertical-align:top;}
+table.partmap th{background:#1d170f;color:var(--accent);font-weight:600;}
+table.partmap tr:nth-child(even) td{background:#15110c;}
+table.partmap td.this-paper{color:var(--sanskrit);font-weight:600;}
+
+blockquote.pull{
+  margin:40px 0;padding:24px 28px;border-left:3px solid var(--accent);
+  background:linear-gradient(90deg, #1a140c, transparent);font-style:italic;font-size:18.5px;color:#ddd0b8;
+}
+blockquote.pull .attrib{display:block;text-align:right;font-style:normal;font-size:13px;color:var(--accent);margin-top:12px;letter-spacing:.05em;text-transform:uppercase;}
+
+h1.sectionhead{
+  font-family:var(--display);font-size:14px;color:var(--accent);letter-spacing:.18em;text-transform:uppercase;
+  margin:64px 0 4px;border-top:1px solid var(--rule);padding-top:36px;
+}
+h1.sectionhead + h2.sectiontitle{margin-top:6px;}
+h2.sectiontitle{font-family:var(--display);font-size:30px;line-height:1.25;color:#f4ead8;margin:0 0 28px;font-weight:600;}
+h3{font-family:var(--display);font-size:21px;color:var(--sanskrit);margin:38px 0 14px;}
+p{margin:0 0 18px;color:var(--ink);}
+.dim{color:var(--ink-dim);}
+
+.sanskrit-block{
+  text-align:center;font-size:21px;color:var(--sanskrit);line-height:1.9;margin:30px 0;padding:18px 0;
+  border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+}
+.sanskrit-block .translit{display:block;font-size:15px;font-style:italic;color:var(--ink-dim);margin-top:10px;font-family:var(--serif);}
+.sanskrit-block .gloss{display:block;font-size:14.5px;color:var(--ink-faint);margin-top:8px;font-family:var(--serif);font-style:normal;}
+.cite-source{text-align:center;font-size:13px;color:var(--ink-faint);margin-top:-22px;margin-bottom:30px;letter-spacing:.04em;}
+
+.accent-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin:30px 0;}
+.accent-card{background:var(--bg-card);border:1px solid var(--rule);border-radius:4px;padding:20px;}
+.accent-card.udatta{border-color:#c9933f;background:#1c160b;}
+.accent-card.anudatta{border-color:#7d7263;background:#141110;}
+.accent-card.svarita{border-color:#8a6a3a;background:#18130c;}
+.accent-card .ac-sanskrit{font-family:var(--display);font-size:24px;color:var(--sanskrit);margin-bottom:4px;}
+.accent-card .ac-roman{font-size:13px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px;}
+.accent-card .ac-label{font-weight:600;color:var(--ink);font-size:15px;margin-bottom:8px;}
+.accent-card p{font-size:14.5px;color:var(--ink-dim);margin-bottom:8px;}
+.ac-tag{font-size:12.5px;color:var(--accent);font-style:italic;}
+
+table.datatable{width:100%;border-collapse:collapse;margin:24px 0;font-size:15px;}
+table.datatable th,table.datatable td{border:1px solid var(--rule);padding:10px 12px;text-align:left;vertical-align:top;}
+table.datatable th{background:#1d170f;color:var(--accent);}
+table.datatable tr:nth-child(even) td{background:#15110c;}
+table.datatable caption{text-align:left;font-size:14px;color:var(--ink-faint);margin-bottom:10px;font-style:italic;}
+
+.divider-orn{text-align:center;color:var(--accent-deep);font-size:20px;margin:46px 0;letter-spacing:.5em;}
+
+footer.papertail{text-align:center;padding:48px 24px 80px;border-top:1px solid var(--rule);margin-top:60px;}
+footer.papertail .om{font-size:24px;color:var(--accent);margin-bottom:14px;}
+footer.papertail .omtatsat{font-size:14px;color:var(--ink-faint);font-style:italic;margin-bottom:30px;}
+footer.papertail .stamp{font-size:13px;color:var(--ink-faint);line-height:1.9;}
+footer.papertail .stamp b{color:var(--ink-dim);}
+
+.footnotes{font-size:14.5px;color:var(--ink-dim);}
+.footnotes li{margin-bottom:14px;}
+.footnotes sup{color:var(--accent);}
+
+.glossterm{font-family:var(--display);color:var(--sanskrit);font-size:17px;}
+dl.glossary dt{margin-top:22px;}
+dl.glossary dd{color:var(--ink-dim);font-size:14.5px;margin:6px 0 0;}
+
+.svara-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(90px,1fr));gap:8px;margin:24px 0;text-align:center;}
+.svara-cell{background:var(--bg-card);border:1px solid var(--rule);border-radius:3px;padding:12px 4px;font-family:var(--display);color:var(--sanskrit);font-size:19px;}
+.svara-cell small{display:block;color:var(--ink-faint);font-size:10px;margin-top:4px;}
+.svara-cell .raga{display:block;color:var(--accent);font-size:10px;margin-top:2px;font-style:italic;}
+
+.reading-note{background:var(--bg-card);border:1px solid var(--rule);border-radius:4px;padding:20px 24px;margin:24px 0;font-size:14.5px;color:var(--ink-dim);}
+.reading-note b{color:var(--ink);}
+
+.rasa-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin:30px 0;}
+.rasa-card{background:var(--bg-card);border:1px solid var(--rule);border-radius:4px;padding:18px 20px;}
+.rasa-card .rc-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;}
+.rasa-card .rc-sanskrit{font-family:var(--display);font-size:21px;color:var(--sanskrit);}
+.rasa-card .rc-roman{font-size:12px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.04em;}
+.rasa-card .rc-sthayibhava{font-size:13.5px;color:var(--accent);font-style:italic;margin-bottom:10px;}
+.rasa-card p{font-size:14px;color:var(--ink-dim);margin-bottom:6px;}
+.rasa-card .rc-deity{font-size:12px;color:var(--ink-faint);}
+.rasa-card .rc-color{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle;}
+
+.formula-box{
+  background:#161108;border:1px solid var(--accent-deep);border-radius:4px;padding:26px 30px;margin:30px 0;
+  text-align:center;
+}
+.formula-box .formula-main{font-family:var(--display);font-size:20px;color:var(--sanskrit);letter-spacing:.02em;margin-bottom:10px;}
+.formula-box .formula-translit{font-size:14.5px;font-style:italic;color:var(--ink-dim);}
+.formula-box .formula-note{font-size:13.5px;color:var(--ink-faint);margin-top:14px;border-top:1px solid var(--rule);padding-top:14px;}
+
+.theory-compare{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin:28px 0;}
+.theory-card{background:var(--bg-card);border:1px solid var(--rule);border-radius:4px;padding:20px;}
+.theory-card .tc-name{font-family:var(--display);color:var(--sanskrit);font-size:17px;margin-bottom:4px;}
+.theory-card .tc-school{font-size:12px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.04em;margin-bottom:10px;}
+.theory-card p{font-size:14px;color:var(--ink-dim);}
+
+@media (max-width:600px){
+  body{font-size:16.5px;}
+  .title-block h1{font-size:30px;}
+  .title-block h2.subtitle{font-size:18px;}
+  h2.sectiontitle{font-size:24px;}
+  nav.toc a{margin:0 6px;display:inline-block;}
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="brand">Cultural Musings</div>
+  <div class="platform-sub">Vedic &amp; Śāstric Research Platform</div>
+  <div class="series-tag">Series B · Part Four of Twelve</div>
+  <div class="devanagari-strip">रसः · भावः · साधारणीकरणम् · रसास्वादनम् · सहृदयः · अभिनवगुप्तः · विभावानुभाव</div>
+
+  <nav class="toc" aria-label="This paper">
+    <a href="#series-context">Series Context</a>
+    <a href="#abstract">Abstract</a>
+    <a href="#sec-1">I. The Origin Myth and Its Stakes</a>
+    <a href="#sec-2">II. Bharata's Sūtra</a>
+    <a href="#sec-3">III. The Eight Rasas and Sthāyibhāvas</a>
+    <a href="#sec-4">IV. The Vyabhicāribhāvas</a>
+    <a href="#sec-5">V. Vibhāva and Anubhāva</a>
+    <a href="#sec-6">VI. Three Theories of Rasa-Production</a>
+    <a href="#sec-7">VII. Abhinavagupta and Sādhāraṇīkaraṇa</a>
+    <a href="#sec-8">VIII. The Sahṛdaya</a>
+    <a href="#sec-9">IX. Śānta and the Ninth Rasa Controversy</a>
+    <a href="#sec-10">X. Rasa, Bheda, and Categorical Perception</a>
+    <a href="#sec-11">XI. Limits and the Forward Problem</a>
+    <a href="#sec-12">XII. Forward to Part Five</a>
+    <a href="#footnotes">Footnotes</a>
+    <a href="#bibliography">Bibliography</a>
+    <a href="#glossary">Glossary</a>
+  </nav>
+
+  <nav class="allparts" aria-label="Series B — all parts">
+    <a href="https://shastrasvakpsychology.culturalmusings.com/">Part I · Vāk as the Ground of Psychological Awareness</a> ·
+    <a href="https://shastrasvakpsychology-parttwo.culturalmusings.com/">Part II · Śabda-Bheda: The Birth of Discrimination</a> ·
+    <a href="https://shastrasvakpsychology-partthree.culturalmusings.com/">Part III · Sāma Veda and the Birth of Affect</a> ·
+    <span class="current">Part IV · Nāṭyaśāstra I: Rasa</span> ·
+    <a href="https://shastrasvakpsychology-partfive.culturalmusings.com/">Part V · Nāṭyaśāstra II: Abhinaya</a> ·
+    <a href="https://shastrasvakpsychology-partsix.culturalmusings.com/">Part VI · Yoga-Śāstra: Citta-Vṛtti</a> ·
+    <a href="https://shastrasvakpsychology-partseven.culturalmusings.com/">Part VII · Proliferation I: Vyākaraṇa, Nyāya</a> ·
+    <a href="https://shastrasvakpsychology-parteight.culturalmusings.com/">Part VIII · Proliferation II: Arthaśāstra, Āyurveda</a> ·
+    <a href="https://shastrasvakpsychology-partnine.culturalmusings.com/">Part IX · Mantra-Śāstra</a> ·
+    <a href="https://shastrasvakpsychology-partten.culturalmusings.com/">Part X · Case Studies</a> ·
+    <a href="https://shastrasvakpsychology-parteleven.culturalmusings.com/">Part XI · Dharma and Adharma</a> ·
+    <a href="https://shastrasvakpsychology-parttwelve.culturalmusings.com/">Part XII · Pratiprasava</a>
+  </nav>
+</header>
+
+<main>
+
+  <div class="title-block">
+    <div class="kicker">Series B · Part IV of XII · White Paper</div>
+    <h1>Nāṭyaśāstra I: Rasa and the Architecture of Emotion</h1>
+    <h2 class="subtitle">Bharata's Synthesis of Word, Song, and Gesture into a Theory of Aesthetic Feeling — The Sthāyibhāva-Vyabhicāribhāva Architecture and the Problem of Rasāsvādana</h2>
+    <div class="meta-grid">
+      <span><b>Series</b> B · Part IV of XII</span>
+      <span><b>Vāk Level</b> Vaikharī fully synthesised — word, tone, and gesture unified</span>
+      <span><b>Format</b> White Paper · 68 Pages</span>
+      <span><b>Predecessor</b> Series B · Part III — Sāma Veda and the Birth of Affect</span>
+    </div>
+  </div>
+
+  <div class="ornament">↗</div>
+
+  <section id="series-context" class="context-box">
+    <h3>Where Part Four Stands in the Series</h3>
+    <p>Part Three closed by naming, with deliberate precision, the three respects in which
+    the Sāma Veda's melodic affective-technology remains incomplete: it lacks a systematic
+    theory of affective categories (it differentiates practically but not theoretically);
+    it lacks a theory of the recipient (it specifies the performer's training but not the
+    listener's constitution); and it is restricted to purely tonal means, lacking the
+    integration of word, gesture, and dramatic context that a fully synthetic
+    affective-engineering system requires. Part Four exists because these three limits are
+    genuine theoretical gaps, not merely matters of degree, and because the Nāṭyaśāstra of
+    Bharata Muni — the foundational treatise of Indian dramaturgy, dating in its core
+    portions to roughly the period between the second century BCE and the third century CE,
+    though the text as transmitted is a composite accumulated over centuries — closes
+    precisely these three gaps through a single, audacious theoretical move: the doctrine
+    of rasa.</p>
+
+    <p>This paper's task is to reconstruct that doctrine with the same density of textual,
+    philological, and philosophical engagement Part Two brought to Pāṇinian grammar and
+    Part Three brought to Sāmavedic chant-theory — and, per the instruction this series now
+    follows, at a still greater depth than either predecessor: not a survey of rasa-theory's
+    headline claims, but a sustained engagement with the sūtra's actual wording, the
+    seven-century interpretive controversy that wording generated among Bharata's
+    commentators, and the specific philosophical machinery — sādhāraṇīkaraṇa,
+    rasāsvādana, sāttvika-bhāvas, the sahṛdaya's citta-constitution — that the tradition
+    developed to make the doctrine coherent. Bharata's text does not explain itself; it
+    compresses an entire psychology of aesthetic experience into a single, famously cryptic
+    sūtra (examined in full in Section II below), and the history of Indian aesthetics from
+    Bhaṭṭa Lollaṭa in perhaps the eighth century through Abhinavagupta in the early
+    eleventh is substantially a history of competing attempts to decompress that sūtra into
+    a workable theory. This paper takes the position — argued for, not merely asserted, in
+    Sections VI and VII — that Abhinavagupta's reading is the most philosophically complete
+    of the historical candidates, while taking equally seriously what the earlier theories
+    (Lollaṭa's, Śaṅkuka's, Bhaṭṭa Nāyaka's) get right and what Abhinavagupta's synthesis
+    owes to each of them.</p>
+
+    <h4>Why Rasa Is the Series' Fourth Domain</h4>
+    <p>The developmental logic governing this series' part-sequence places rasa-theory
+    immediately after Sāmavedic affect (Part Three) and immediately before abhinaya, the
+    embodied-gestural dimension of dramatic performance (Part Five), for a structural
+    reason already partly stated in Part Three's Section 9.1: rasa-theory is what affective
+    bheda looks like once the differentiation-operation has been supplied with (a) a
+    complete theoretical taxonomy of the affective field's fundamental categories — the
+    eight, later nine, sthāyibhāvas — and (b) a theory of the conditions, internal to the
+    recipient as much as external in the performance, under which that taxonomy's categories
+    become available not merely as concepts but as lived, tasted, aesthetically transfigured
+    experience. The Nāṭyaśāstra does not abandon the Sāmavedic melodic technology Part
+    Three documented; Chapters XXVIII through XXXIV of the received text are themselves a
+    treatise on music (gāndharva), and the Nāṭyaśāstra explicitly assigns song a
+    constitutive role in rasa's production (Section V below). What the Nāṭyaśāstra adds is
+    the integration of that melodic technology with verbal, gestural, and dramaturgical
+    technologies into a single system whose explicit, stated purpose — announced in the
+    text's own origin narrative, examined in Section I — is the production of rasa in a
+    qualified spectator.</p>
+
+    <table class="partmap">
+      <tr><th>Part</th><th>Psychological Stage</th><th>Focus</th></tr>
+      <tr><td>I</td><td>Pre-differentiated awareness</td><td>Vāk as the Ground of Psychological Awareness</td></tr>
+      <tr><td>II</td><td>Differentiation / discernment</td><td>Śabda-Bheda: The Birth of Discrimination</td></tr>
+      <tr><td>III</td><td>Feeling-toned cognition</td><td>Sāma Veda and the Birth of Affect</td></tr>
+      <tr><td class="this-paper">IV</td><td class="this-paper">Aesthetic embodiment</td><td class="this-paper">This Paper — Nāṭyaśāstra I: Rasa and the Architecture of Emotion</td></tr>
+      <tr><td>V</td><td>Somatic cognition</td><td>Nāṭyaśāstra II: Abhinaya and Embodied Expression</td></tr>
+      <tr><td>VI</td><td>Self-regulation / will</td><td>Yoga-Śāstra: Citta-Vṛtti and Disciplined Attention</td></tr>
+      <tr><td>VII</td><td>Specialised cognition</td><td>Proliferation of Śāstra I: Vyākaraṇa, Nyāya</td></tr>
+      <tr><td>VIII</td><td>Social/embodied extension</td><td>Proliferation of Śāstra II: Arthaśāstra, Āyurveda</td></tr>
+      <tr><td>IX</td><td>Recursive self-application</td><td>Mantra-Śāstra: Vāk Returning as Sound-Technology</td></tr>
+      <tr><td>X</td><td>Applied/historical synthesis</td><td>Case Studies in Śabda-to-Śāstra Transmission</td></tr>
+      <tr><td>XI</td><td>Ethical-metaphysical synthesis</td><td>Dharma and Adharma: The Convergent Psychology of Order</td></tr>
+      <tr><td>XII</td><td>Closing return</td><td>Pratiprasava: Vāk's Return and the Handoff Beyond</td></tr>
+    </table>
+  </section>
+
+  <div class="ornament">✦</div>
+
+  <section id="abstract">
+    <h2 class="sectiontitle" style="font-size:24px;">Abstract</h2>
+    <p>This paper develops, across twelve sections at a depth exceeding any predecessor
+    paper in the series, a full reconstruction of Bharata's rasa-theory as the third major
+    historical elaboration of the bheda-operation: the systematic differentiation, this time
+    armed with a complete theoretical taxonomy and a theory of the recipient, of the felt
+    field into nameable, transmissible, aesthetically-transfigured rasas. First, the paper
+    examines the Nāṭyaśāstra's own four-Veda origin-narrative (I.9–15) as the text's
+    self-positioning relative to the Vedic corpus, with particular attention to the
+    text's specific and consequential claim that rasa itself derives from the Atharvaveda
+    rather than, as might be expected given Part Three's argument, the Sāmaveda. Second, the
+    paper undertakes a sustained philological and philosophical reading of the single sūtra
+    on which the entire edifice of rasa-theory rests — vibhāvānubhāvavyabhicāribhāvasaṃyogād
+    rasaniṣpattiḥ — examining each of its compound's components in turn and the
+    seven-century interpretive controversy the sūtra's compression generated. Third, the
+    paper develops, rasa by rasa, the full taxonomy of the eight (later nine) sthāyibhāvas
+    and their corresponding rasas, treating each pairing with the textual, iconographic, and
+    psychological specificity the topic requires rather than as a mere enumerated list.
+    Fourth, the paper examines the thirty-three vyabhicāribhāvas as a second-order
+    differentiation internal to the bheda-framework — the subsidiary, transient affective
+    modulations that flow into and qualify the sthāyibhāvas without themselves achieving
+    rasa-status. Fifth, the paper examines the vibhāva-anubhāva apparatus — the determinant
+    causes and consequent effects through which a sthāyibhāva is dramaturgically rendered
+    perceptible — together with the sāttvika-bhāvas, the eight involuntary
+    psychophysiological responses (stambha, sveda, romāñca, svarabheda, vepathu,
+    vaivarṇya, aśru, pralaya) that the text treats as the most reliable evidence of rasa's
+    occurrence. Sixth, the paper reconstructs in full the historical sequence of competing
+    theories of rasa-production — Bhaṭṭa Lollaṭa's utpattivāda, Śrī Śaṅkuka's
+    anumitivāda, and Bhaṭṭa Nāyaka's bhuktivāda — treating each not as a discarded way-
+    station but as a substantive philosophical position with real argumentative force.
+    Seventh, the paper develops Abhinavagupta's sādhāraṇīkaraṇa-based synthesis,
+    examining the concept of generalisation or universalisation through which the
+    particular emotions of a particular dramatic character become, for the properly
+    prepared spectator, a generalised aesthetic object freed from the limiting conditions
+    (deśa-kāla-viśeṣa) of ordinary personal emotion. Eighth, the paper examines the
+    sahṛdaya in full — the citta-constitution, developed through the saṃskāra-mechanism
+    Part Three established, that makes a spectator capable of rasāsvādana — together with
+    Abhinavagupta's controversial claim that rasa-experience approaches, without
+    identically reaching, the bliss (ānanda) of Brahman-realisation. Ninth, the paper
+    examines the historically contested ninth rasa, śānta, and the centuries-long debate
+    over its admissibility into a system originally and explicitly enumerated as eightfold.
+    Tenth, the paper draws the explicit parallel — promised in Part Two and partially
+    developed in Part Three — between rasa-theory's account of aesthetic universalisation
+    and the categorical-perception model that has structured this entire series, arguing
+    that rasāsvādana is best understood as the most refined achievable instance of the
+    bheda-operation applied reflexively to the perceiving subject's own affective
+    categories. Eleventh, the paper specifies what even Abhinavagupta's synthesis leaves
+    unresolved, preparing the ground for Part Five's necessity. Twelfth, the paper executes
+    the handoff to Part Five's treatment of abhinaya, identifying which specific elements of
+    the present paper's account — particularly the anubhāva-apparatus and the sāttvika-
+    bhāvas — require the embodied, gestural treatment Part Five will supply.</p>
+
+    <div class="reading-note">
+      <b>Reading Note</b> — This paper presupposes Part Three's bhāva/citta distinction
+      (Section IV), its citta-saṃskāra model of affective education (Section VI), and its
+      taxonomy of three acknowledged limits (Section 9.1), to which the present paper is a
+      direct response. Readers approaching without that background should consult Part
+      Three's Sections IV, VI, and 9.1 before proceeding. Given the instruction governing
+      this and all subsequent papers in the series to increase depth beyond predecessor
+      papers, the present paper engages Bharata's Sanskrit text, its principal
+      commentators (Abhinavagupta's Abhinavabhāratī foremost among them), and the modern
+      philological scholarship on rasa-theory in greater granularity than Part Three's
+      treatment of Sāmavedic sources — including sustained attention to specific Sanskrit
+      terms left untranslated where translation would lose technical precision, and to the
+      actual argumentative structure of the Lollaṭa–Śaṅkuka–Nāyaka–Abhinavagupta sequence
+      rather than a summary verdict in Abhinavagupta's favour alone.</div>
+  </section>
+
+  <h1 class="sectionhead" id="sec-1">I.</h1>
+  <h2 class="sectiontitle">The Origin Myth and Its Stakes: Why Rasa Is Said to Come from the Atharvaveda</h2>
+
+  <h3>1.1 The Brahma-Creation Narrative</h3>
+  <p>The Nāṭyaśāstra opens not with a definition of drama but with a creation-narrative,
+  and the narrative's specific content is doing argumentative work that the text's later,
+  more technical chapters presuppose without re-stating. In Nāṭyaśāstra I.9–15, the sages
+  led by Bharata ask Brahma to explain the origin of the nāṭyaveda — the "fifth Veda" of
+  dramatic performance — and Brahma's answer is that he composed it by extracting specific
+  components from each of the four existing Vedas: pāṭhya, the spoken word, from the
+  Ṛgveda; gīta, song, from the Sāmaveda; abhinaya, the four-fold system of histrionic
+  representation, from the Yajurveda; and — the claim this section is most concerned
+  with — rasa, aesthetic flavour or relish, from the Atharvaveda. Brahma then compiles
+  these four extracted elements into a fifth Veda, transmits it first to Bharata and his
+  hundred sons, and the Nāṭyaśāstra as a whole purports to be the resulting compilation of
+  dramaturgical, musical, and aesthetic knowledge.</p>
+
+  <p>The myth's basic function is canonical legitimation: by deriving nāṭya from the four
+  existing Vedas rather than treating it as a wholly secular, non-revealed art-form, the
+  Nāṭyaśāstra claims for dramatic performance a portion of the authority (prāmāṇya) that
+  attaches to śruti. This is a move with clear precedent and clear motivation — Indian
+  intellectual traditions standardly seek to ground a given śāstra's authority either in
+  direct Vedic derivation or in an unbroken paramparā traceable to a divine or
+  semi-divine source, and a tradition concerned (as the Nāṭyaśāstra explicitly is, in its
+  later chapters on the social and ritual status of actors) with defending the dignity and
+  legitimacy of dramatic performance against suspicion of frivolity or impurity has
+  obvious reasons to claim the strongest available form of this legitimation.</p>
+
+  <h3>1.2 Why Rasa and Not Sāman: The Specific Puzzle for This Series</h3>
+  <p>For this paper's argument, however, the myth's specific assignment of rasa to the
+  Atharvaveda — rather than to the Sāmaveda, which Part Three has just spent an entire
+  paper establishing as the tradition's first systematic affective-engineering technology
+  — is a genuine interpretive puzzle requiring direct address, not silent passing-over. Three
+  considerations bear on resolving it. First, the assignment is plausibly determined less
+  by a considered theory of rasa's psychological origin than by the formal requirement of
+  the myth's own structure: Brahma extracts one element from each of the four Vedas, no
+  Veda may be left empty-handed, and gīta has already been assigned to the Sāmaveda, so rasa
+  — needing a Veda of its own — falls by elimination to the Atharvaveda, the remaining and
+  historically latest-canonised member of the four-Veda set. On this reading, too much
+  should not be made of the assignment's content; it is substantially an artifact of the
+  myth's combinatorial requirements.</p>
+
+  <p>Second, and more substantively, the Atharvaveda's traditional association with
+  practical, this-worldly, often explicitly psychophysiological efficacy — its hymns
+  include charms for healing, for binding another's affection, for inducing sleep, for
+  countering fear, for producing specific mental and bodily states through ritual
+  utterance — makes it, of the four Vedas, the one most plausibly associated with the
+  direct production of psychophysiological effects in a human subject, which is closer to
+  what rasa, on the production-theories examined in Section VI, is actually supposed to do:
+  not merely to represent or signify an emotion (which would align more naturally with
+  pāṭhya's assignment to the Ṛgveda) but to produce, in the spectator's own
+  psychophysiology, a determinate aesthetic-affective state. Sheldon Pollock's
+  observation that the Atharvaveda's characteristic mode is performative and effect-
+  producing rather than descriptive supports reading the rasa-Atharvaveda assignment as
+  more than an arbitrary remainder-allocation: it registers, even if only implicitly, an
+  intuition about what kind of thing rasa is — an effect produced in a subject, not merely
+  a meaning conveyed.</p>
+
+  <p>Third — and this is the consideration most directly relevant to reconciling Part
+  Three's argument with the present paper's starting point — the myth's assignment of
+  gīta rather than rasa to the Sāmaveda should not be read as a claim that the Sāmavedic
+  tradition has no relationship to rasa, but rather as the myth's way of registering exactly
+  the distinction Part Three's Section 9 already drew: the Sāmaveda supplies one
+  necessary component (melodic, tonal affective technology) of the larger rasa-producing
+  synthesis, but the synthesis itself — the integration of word, song, gesture, and the
+  specific psychological achievement of rasa as a distinct category of experience — is not
+  reducible to or simply identical with what the Sāmavedic component alone contributes.
+  Gīta is an ingredient; rasa is the dish. The myth's apportionment of the four ingredients
+  among the four Vedas, with rasa standing apart as the name of what results from their
+  combination rather than as one further ingredient alongside the other three, is in this
+  sense a remarkably precise piece of theoretical self-description, whether or not the
+  myth's composers intended this precision.</p>
+
+  <h3>1.3 The Disruption Narrative and the Need for Nāṭya</h3>
+  <p>The Nāṭyaśāstra's origin-narrative does not stop at the four-Veda extraction; it
+  continues (I.16–66) with an account of why nāṭya was needed in the first place: the
+  Kṛtayuga had given way to the Tretāyuga, human beings had fallen under the sway of
+  kāma and lobha (desire and greed), and the gods, troubled, asked Brahma to create
+  something that ordinary people of all four varṇas — not only those qualified to study
+  the Vedas directly — could access, that would be simultaneously instructive
+  (upadeśa-janma) and pleasurable (rasa-bhāva-pradhāna), conveying dharmic and
+  practical knowledge to those excluded from direct Vedic study by combining
+  instruction with aesthetic pleasure in a single experiential package.</p>
+
+  <p>This second narrative-layer is significant for the present paper because it specifies,
+  at the mythic level, the precise functional problem rasa-theory exists to solve: how can
+  an experience be simultaneously cognitively substantive (conveying real knowledge of
+  dharma, of human character, of the consequences of action) and affectively absorbing
+  (producing the kind of pleasurable engagement that secures voluntary attention and
+  retention, in a way that dry instruction does not)? The Nāṭyaśāstra's own answer,
+  developed across the text's subsequent chapters and reconstructed in this paper's
+  Sections II through VIII, is that rasa is precisely the name for experience that achieves
+  both simultaneously — and that achieving both simultaneously requires the specific
+  technical apparatus (vibhāva, anubhāva, vyabhicāribhāva, sāttvika-bhāva) the
+  Nāṭyaśāstra goes on to specify with a precision Part Three's Section 9.1 correctly noted
+  the Sāma tradition does not, on its own, provide.</p>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-2">II.</h1>
+  <h2 class="sectiontitle">Bharata's Sūtra: A Philological and Philosophical Reading</h2>
+
+  <h3>2.1 The Sūtra in Full</h3>
+  <p>The entirety of classical Indian rasa-theory is, in the most direct textual sense, a
+  body of commentary upon a single sentence. Nāṭyaśāstra VI, in its prose
+  passage following the chapter's verse-enumeration of the eight rasas, states the
+  condition under which rasa comes into being. The sūtra, in its most frequently cited
+  form, runs as follows.</p>
+
+  <div class="formula-box">
+    <div class="formula-main">विभावानुभावव्यभिचारिभावसंयोगाद् रसनिष्पत्तिः</div>
+    <div class="formula-translit">vibhāvānubhāvavyabhicāribhāvasaṃyogād rasaniṣpattiḥ</div>
+    <div class="formula-note">"From the conjunction (saṃyoga) of the determinants (vibhāva), the consequents
+    (anubhāva), and the transitory states (vyabhicāribhāva), there is the accomplishment
+    (niṣpatti) of rasa." — Nāṭyaśāstra VI, prose following verse 31 (numbering varies
+    by edition)</div>
+  </div>
+
+  <p>Every substantive term in this sentence is technical, and the sentence's grammar —
+  a single compound noun (vibhāvānubhāvavyabhicāribhāvasaṃyoga) standing in the ablative
+  case, governing a second compound noun (rasaniṣpatti) standing in the nominative — is
+  compressed almost to the point of unintelligibility without the surrounding chapter's
+  context and without the seven centuries of commentary the sentence subsequently
+  generated. The interpretive history of Indian aesthetics from perhaps the eighth century
+  (Bhaṭṭa Lollaṭa) through the early eleventh (Abhinavagupta) is, in the most precise
+  sense available, a history of disagreement about how to parse this single ablative
+  construction: what kind of causal, logical, or experiential relation does saṃyogāt
+  ("from the conjunction of") name, and what kind of event or state is niṣpatti
+  ("accomplishment," "coming-into-being," "production")?</p>
+
+  <h3>2.2 Vibhāva: The Determinant</h3>
+  <p>Vibhāva — from vi + √bhū, "to become apparent, to be made manifest" — names the
+  causes or determinants that, within the dramatic representation, establish the
+  context and occasion for a particular sthāyibhāva to be exhibited. The Nāṭyaśāstra
+  and subsequent tradition subdivide vibhāva into two categories: ālambana-vibhāva, the
+  "supportive" or object-determinant (the person or object toward whom the emotion is
+  directed — the beloved, in the case of rati; the dangerous animal, in the case of
+  bhaya), and uddīpana-vibhāva, the "excitant" or circumstance-determinant (the
+  surrounding conditions that intensify the emotion once its object is established — moonlight
+  and a garden setting intensifying rati; darkness and a lonely forest intensifying
+  bhaya). This bipartite structure is not a minor taxonomic nicety; it reflects the
+  tradition's recognition that an emotion's dramatic presentation requires both an object
+  toward which the emotion is oriented and a set of circumstances that calibrate the
+  emotion's intensity, and that conflating these two functions would impoverish the
+  analysis of how a scene actually produces its affective weight.</p>
+
+  <h3>2.3 Anubhāva: The Consequent</h3>
+  <p>Anubhāva — anu + √bhū, "to follow from, to be experienced as a consequence" — names
+  the outward, perceptible effects or expressions through which an internal sthāyibhāva,
+  once aroused by its vibhāvas, becomes visible to an external observer: the glance, the
+  smile, the trembling, the change of complexion, the gesture of embrace or recoil. Where
+  vibhāva is causally prior to the sthāyibhāva (it is what occasions the emotion),
+  anubhāva is causally posterior (it is what the emotion, once present, produces in the
+  body and behaviour of the character experiencing it) — and it is specifically anubhāva,
+  rather than vibhāva, that does the work of making the sthāyibhāva perceptible to the
+  audience, since an audience cannot directly perceive another's internal state but can
+  perceive its bodily and behavioural manifestations. This is the precise point at which
+  Part Five's treatment of abhinaya will need to take up the analysis in full: the
+  anubhāvas are, in the dramatic context, exactly what the actor's technique of
+  abhinaya exists to produce convincingly, and the Nāṭyaśāstra's elaborate four-fold
+  classification of abhinaya (āṅgika, vācika, sāttvika, āhārya — bodily, verbal,
+  psychophysiological, and costume/makeup-based) is substantially a technical manual for
+  the controlled production of anubhāvas.</p>
+
+  <h3>2.4 The Sāttvika-Bhāvas: A Special Class of Anubhāva</h3>
+  <p>Within the general category of anubhāva, the Nāṭyaśāstra (Chapter VII) identifies a
+  special subclass of eight involuntary psychophysiological responses — the
+  sāttvika-bhāvas, so named because they arise from sattva, here meaning not the guṇa
+  in its Sāṃkhyan sense but a quality of inner sincerity or genuineness of feeling that
+  makes these particular bodily responses arise without the actor's conscious volitional
+  control. The eight are: stambha (paralysis, stupefaction), sveda (perspiration),
+  romāñca (horripilation, the bodily hair standing on end — directly continuous with the
+  frisson-phenomenon Part Three's Section 5.2 examined in its neuroscientific register),
+  svarabheda (breaking or change of the voice), vepathu (trembling), vaivarṇya (change
+  of complexion, pallor), aśru (tears), and pralaya (loss of consciousness, fainting).</p>
+
+  <p>The theoretical significance of the sāttvika-bhāvas, for this paper's argument, is
+  considerable and has not always received the attention it deserves in summary
+  treatments of rasa-theory. Because these eight responses are involuntary — because they
+  cannot, in the ordinary case, be produced by a simple act of will independent of the
+  actual presence of the corresponding internal state — the tradition treats their
+  appearance as the most reliable available evidence that a sthāyibhāva has genuinely
+  been aroused, whether in the dramatic character being represented, in the actor
+  representing that character, or (crucially, for the theories of rasa-production examined
+  in Section VI) in the spectator witnessing the representation. Abhinavagupta will make
+  considerable use of precisely this involuntary, sattva-grounded character of the eight
+  responses in constructing his account of how rasa-experience differs from the deliberate,
+  willed quality of ordinary inference (Section 7.2 below).</p>
+
+  <h3>2.5 Vyabhicāribhāva: The Transitory State</h3>
+  <p>Vyabhicāribhāva — vi + abhi + √car, "to move about, to wander, to range across" — names
+  the thirty-three subsidiary affective states (catalogued in full in Section IV below)
+  that arise transiently in the course of a dramatic representation, flowing into,
+  qualifying, intensifying, or modulating the underlying sthāyibhāva without themselves
+  achieving the status of a sthāyibhāva or producing a rasa of their own. The term's
+  etymology is itself doing theoretical work: vyabhicāra names a wandering or ranging
+  movement, and the vyabhicāribhāvas are precisely those affective colourations that move
+  through and across a scene's dominant emotional register without becoming dominant
+  themselves — anxiety (śaṅkā) flickering across a scene whose sthāyibhāva is rati,
+  envy (asūyā) colouring a scene whose sthāyibhāva is utsāha, without either anxiety or
+  envy displacing the scene's governing emotional architecture.</p>
+
+  <h3>2.6 Saṃyoga and Niṣpatti: The Crux of the Interpretive Controversy</h3>
+  <p>Having specified the meaning of each of the sūtra's component terms, this paper can
+  now state precisely where the interpretive controversy that occupies Section VI in full
+  actually lies: not in what vibhāva, anubhāva, and vyabhicāribhāva individually mean
+  (on this the tradition is in substantial agreement) but in what saṃyoga ("conjunction,"
+  "combination," "coming-together") names as a relation, and what niṣpatti
+  ("accomplishment," "production," "coming-into-being") names as an event. Does saṃyoga
+  name a causal relation, such that the conjunction of vibhāva, anubhāva, and
+  vyabhicāribhāva literally produces — brings into existence where it did not exist
+  before — a new entity called rasa (Lollaṭa's position, Section 6.1)? Does it name an
+  inferential relation, such that the spectator infers, from the perceived conjunction of
+  these elements in the actor's performance, that the represented character is
+  experiencing a particular sthāyibhāva, with rasa naming something like the
+  inferred-and-relished quality of this inference (Śaṅkuka's position, Section 6.2)? Does
+  it name a manifestation-relation, such that rasa is not produced or inferred but
+  manifested — revealed as already latently present in the spectator's own citta, the way
+  a lamp manifests an object that was already there in the dark (Bhaṭṭa Nāyaka's and,
+  with important differences, Abhinavagupta's positions, Sections 6.3 and VII)? The
+  entirety of Section VI is devoted to reconstructing each of these positions and the
+  specific objections each raises against its predecessors, since no summary verdict can
+  substitute for seeing why each theory seemed, to its proponents, forced by the
+  inadequacy of its predecessor.</p>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-3">III.</h1>
+  <h2 class="sectiontitle">The Eight Rasas and Their Sthāyibhāvas: A Differentiated Taxonomy</h2>
+
+  <h3>3.1 Why the Taxonomy Must Be Treated Rasa by Rasa</h3>
+  <p>Part Three's Section 4.3 introduced the eight sthāyibhāvas as a list, necessarily,
+  because Part Three's task was to establish their proto-differentiation in Sāmavedic
+  practice rather than to develop their full theoretical architecture. The present paper's
+  task is different and requires a different mode of treatment: each sthāyibhāva-rasa
+  pairing must be examined with enough specificity — its defining vibhāvas, its
+  characteristic anubhāvas, its associated vyabhicāribhāvas, its presiding deity and
+  symbolic colour in the Nāṭyaśāstra's own systematisation (Chapter VI), and the specific
+  dramaturgical contexts in which the Nāṭyaśāstra and the later nāṭaka-tradition deploy
+  it — that the taxonomy stops being a mere list and becomes what it is in the text itself:
+  a differentiated map of the entire affective territory available to dramatic
+  representation, each region of the map bordering its neighbours in specifiable ways
+  and excluding others.</p>
+
+  <h3>3.2 Śṛṅgāra: The Erotic-Amorous Rasa</h3>
+  <p>Śṛṅgāra, grounded in the sthāyibhāva of rati (love, attachment, longing), is
+  consistently ranked by the tradition — Bharata's own Chapter XIX gives it pride of
+  place, and later theorists including Bhoja and, in his poetic practice if not always his
+  theoretical statements, Abhinavagupta's own milieu treat it as rasarāja, the king of
+  rasas — as the most comprehensive and most aesthetically generative of the eight. The
+  Nāṭyaśāstra distinguishes two modes: saṃbhoga-śṛṅgāra (love-in-union, characterised by
+  the vibhāvas of a beautiful season, a pleasure-garden, ornamentation, the presence of
+  the beloved) and vipralambha-śṛṅgāra (love-in-separation, characterised by the
+  vibhāvas of absence, obstacles, the beloved's anger or the lovers' geographic distance,
+  and developed by the later tradition — especially in connection with the
+  Kṛṣṇa-Rādhā devotional poetry that Part Nine's treatment of mantra-śāstra and bhakti
+  will need to engage — into an entire sub-genre of viraha-kāvya, separation-poetry).
+  Śṛṅgāra's presiding deity is Viṣṇu; its colour, in the Nāṭyaśāstra's symbolic
+  system, is śyāma, a dark blue-black, and its characteristic vyabhicāribhāvas include
+  harṣa (joy), autsukya (eagerness), and smṛti (recollection) in saṃbhoga-śṛṅgāra,
+  shifting toward cintā (anxious reflection), nirveda (despondency), and vyādhi
+  (sickness, lovesickness) in vipralambha-śṛṅgāra — the same sthāyibhāva, rati, supporting
+  two affectively quite distinct modes depending on which vyabhicāribhāvas predominate.</p>
+
+  <h3>3.3 Hāsya: The Comic Rasa</h3>
+  <p>Hāsya, grounded in hāsa (mirth, laughter), is theorised by the Nāṭyaśāstra
+  (Chapter VI's enumeration, elaborated in Chapter XXXIV's treatment of the
+  vidūṣaka or comic jester-figure) as arising specifically from vikṛtavāk,
+  vikṛtaveṣa, and vikṛtaceṣṭa — distorted or incongruous speech, dress, and
+  gesture — a definition that anticipates, by well over a millennium, the
+  incongruity-theories of humour later developed independently in Western
+  philosophical aesthetics (Kant's and Schopenhauer's accounts of laughter as a response
+  to a perceived incongruity between expectation and outcome bear a structural
+  resemblance worth noting without overstating, since the Sanskrit tradition's emphasis
+  falls specifically on social and bodily incongruity — the inappropriate, the
+  ill-fitting, the socially transgressive — rather than on the more general
+  logical-incongruity structure Kant emphasises). The Nāṭyaśāstra further distinguishes
+  ātmastha hāsya (laughter at oneself) from parastha hāsya (laughter at another),
+  and identifies six gradations of laughter from the gentle smita (slight smile) through
+  atihasita (excessive, almost violent laughter) — a gradational precision that
+  illustrates, in miniature, the same impulse toward fine differentiation that drove the
+  three-accent-to-seven-svara expansion examined in Part Three's Section VIII. Hāsya's
+  presiding deity is Pramatha (a category of Śiva's attendants); its colour is śveta,
+  white.</p>
+
+  <h3>3.4 Karuṇa: The Compassionate-Tragic Rasa</h3>
+  <p>Karuṇa, grounded in śoka (grief, sorrow), is defined by vibhāvas including the
+  death or departure of a loved one, the loss of wealth or status, exile, or witnessing
+  calamity, and by anubhāvas including weeping, lamentation (the formal vilāpa, a
+  recognised dramaturgical and poetic genre in its own right), striking the head or
+  breast, and a generally despondent bodily comportment. Karuṇa stands in a structurally
+  interesting relationship to the sāttvika-bhāva of aśru (tears, Section 2.4 above):
+  whereas tears can in principle accompany several rasas (tears of joy are recognised in
+  the tradition's analysis of certain śṛṅgāra contexts), karuṇa is the rasa in which aśru
+  functions as the single most diagnostic anubhāva, and the dramaturgical handling of
+  weeping on stage — itself a delicate problem for a tradition whose stated overall
+  purpose, per Section 1.3, includes the production of pleasure (rasa-bhāva-pradhāna) —
+  becomes a focal point for the tradition's developed theory (taken up fully in Section
+  VII) of how aesthetic distance transforms even a painful sthāyibhāva like śoka into a
+  source of relish rather than mere distress. Karuṇa's presiding deity is Yama, lord of
+  death; its colour is kapota, the grey of a dove.</p>
+
+  <h3>3.5 Raudra: The Furious Rasa</h3>
+  <p>Raudra, grounded in krodha (anger), is defined by vibhāvas including insult,
+  betrayal, oppression, or the sight of injustice, and by anubhāvas including reddened
+  eyes, knitted brows, biting the lip, grasping weapons, and a generally aggressive,
+  forward-leaning bodily posture. The Nāṭyaśāstra's association of raudra with Rudra
+  (Śiva in his fierce aspect, from whom the rasa's name directly derives) and with the
+  colour rakta (red, blood-red) establishes a chromatic-iconographic code that the later
+  tradition of rasa-painting and rasa-associated colour-symbolism in temple sculpture and
+  classical dance costuming draws upon extensively — a point this paper flags for cross-
+  reference with the platform's existing work on the 108 karaṇas and their iconographic
+  mapping. Raudra's characteristic vyabhicāribhāvas include amarṣa (indignation),
+  asūyā (envy or intolerance of another's success), and garva (pride) — the latter
+  illustrating how a vyabhicāribhāva (garva) can serve double duty, qualifying both
+  raudra and, in different dramatic contexts, vīra (Section 3.6 below), without this
+  shared service collapsing the distinction between the two rasas, since it is the
+  surrounding vibhāva-anubhāva configuration, not the vyabhicāribhāva in isolation, that
+  fixes which rasa a given scene instantiates.</p>
+
+  <h3>3.6 Vīra: The Heroic Rasa</h3>
+  <p>Vīra, grounded in utsāha (energy, enthusiasm, heroic vigour), is defined by
+  vibhāvas including the presence of a worthy adversary, a just cause, the prospect of
+  battle or great undertaking, and by anubhāvas including firmness of bodily stance,
+  steadiness of gaze, generosity in victory, and a generally expansive, unshrinking
+  comportment. The Nāṭyaśāstra and later tradition (particularly Viśvanātha's
+  Sāhityadarpaṇa) subdivide vīra into yuddha-vīra (martial heroism), dāna-vīra
+  (heroism of generosity), dharma-vīra (heroism of moral steadfastness), and
+  dayā-vīra (heroism of compassion) — a four-fold elaboration that registers the
+  tradition's recognition that utsāha, the underlying sthāyibhāva, can be directed
+  toward qualitatively different objects (martial victory, material giving, ethical
+  constancy, compassionate action) while remaining recognisably the same underlying
+  affective orientation, in a structural parallel to śṛṅgāra's bipartite saṃbhoga/
+  vipralambha division. Vīra's presiding deity is Indra; its colour is gaura, a
+  fair or golden hue — directly continuous, this paper notes, with the udātta accent's
+  association (Part Three, Section 1.2) with illuminating, awakening, ascending
+  qualities, since vīra and the battle-Sāmans Part Three's Section 4.3 examined share
+  a common affective register across the two papers' independent taxonomies.</p>
+
+  <h3>3.7 Bhayānaka: The Fearful Rasa</h3>
+  <p>Bhayānaka, grounded in bhaya (fear), is defined by vibhāvas including the
+  appearance of fearsome creatures or beings, frightening sounds in darkness, the threat
+  of death or harm, and by anubhāvas including trembling, a dry mouth, paleness
+  (overlapping directly with the sāttvika-bhāva of vaivarṇya), a fixed and darting gaze,
+  and the impulse toward flight or concealment. Bhayānaka's presiding deity is Kāla
+  (time, in its destructive aspect, closely allied with Yama); its colour is kṛṣṇa, black.
+  Bhayānaka's structural kinship with the proto-rasa register Part Three's Section 4.3
+  identified in the apotropaic Sāmans — wide intervallic movement, sudden pitch-shifts,
+  dissonant svarabhaktis — is among the most direct continuities this paper can draw
+  between the Sāmavedic affective taxonomy and the Nāṭyaśāstra's later systematisation:
+  the melodic markers Part Three catalogued for storm-deity and apotropaic ritual chant
+  map with unusual precision onto the vibhāva-anubhāva structure the Nāṭyaśāstra assigns
+  to bhayānaka, suggesting that this particular affective register was among the most
+  stably differentiated across the centuries separating the two textual traditions.</p>
+
+  <h3>3.8 Bībhatsa: The Disgust Rasa</h3>
+  <p>Bībhatsa, grounded in jugupsā (disgust, aversion), is defined by vibhāvas
+  including the sight of decaying or repulsive matter, foul odours, contact with impure
+  substances, and by anubhāvas including the narrowing or closing of the eyes, spitting,
+  turning away the face, and a generally contractive bodily withdrawal. The Nāṭyaśāstra's
+  inclusion of bībhatsa as a distinct rasa — rather than treating disgust as a mere
+  vyabhicāribhāva subordinate to some other sthāyibhāva — is theoretically significant:
+  it registers the tradition's recognition that disgust possesses its own irreducible
+  phenomenal character (what contemporary affective science would call a distinct basic
+  emotion, following Paul Ekman's and others' cross-cultural facial-expression research,
+  which independently identifies disgust as one of a small set of universally recognised
+  basic emotions) rather than being merely a privative or diminished form of fear or
+  sorrow. Bībhatsa's presiding deity is Mahākāla (Śiva in his form as great time/death);
+  its colour is nīla, blue.</p>
+
+  <h3>3.9 Adbhuta: The Wonder Rasa</h3>
+  <p>Adbhuta, grounded in vismaya (astonishment, wonder), is defined by vibhāvas
+  including the sight of divine beings, magical or supernatural events, extraordinary
+  feats, or anything exceeding ordinary expectation, and by anubhāvas including widened
+  eyes, a dropped jaw, exclamations of amazement, and a momentarily suspended or
+  arrested bodily posture — a description that maps with notable precision onto the
+  stambha sāttvika-bhāva (Section 2.4 above) and onto the expectation-violation
+  mechanism Part Three's Section 5.2 examined neuroscientifically in connection with
+  musical frisson, since adbhuta is, in the Nāṭyaśāstra's own analysis, structurally
+  the rasa of expectation maximally and suddenly violated without subsequent threat —
+  violated, that is, in a register that the perceiving subject finds delightful rather
+  than alarming, which is precisely the boundary condition separating adbhuta from
+  bhayānaka (where expectation-violation is also central, per Section 3.7, but combined
+  with threat rather than delight). Adbhuta's presiding deity is Brahma; its colour is
+  pīta, yellow.</p>
+
+  <div class="rasa-grid">
+    <div class="rasa-card">
+      <div class="rc-head"><span class="rc-sanskrit">शृङ्गार</span><span class="rc-roman">Śṛṅgāra</span></div>
+      <div class="rc-sthayibhava">Sthāyibhāva: Rati</div>
+      <p>Erotic-amorous; love in union and separation.</p>
+      <p class="rc-deity">Deity: Viṣṇu · Colour: Śyāma (dark blue-black)</p>
+    </div>
+    <div class="rasa-card">
+      <div class="rc-head"><span class="rc-sanskrit">हास्य</span><span class="rc-roman">Hāsya</span></div>
+      <div class="rc-sthayibhava">Sthāyibhāva: Hāsa</div>
+      <p>Comic; arises from incongruity in speech, dress, gesture.</p>
+      <p class="rc-deity">Deity: Pramatha · Colour: Śveta (white)</p>
+    </div>
+    <div class="rasa-card">
+      <div class="rc-head"><span class="rc-sanskrit">करुण</span><span class="rc-roman">Karuṇa</span></div>
+      <div class="rc-sthayibhava">Sthāyibhāva: Śoka</div>
+      <p>Compassionate-tragic; grief at loss, death, separation.</p>
+      <p class="rc-deity">Deity: Yama · Colour: Kapota (dove grey)</p>
+    </div>
+    <div class="rasa-card">
+      <div class="rc-head"><span class="rc-sanskrit">रौद्र</span><span class="rc-roman">Raudra</span></div>
+      <div class="rc-sthayibhava">Sthāyibhāva: Krodha</div>
+      <p>Furious; anger at insult, betrayal, injustice.</p>
+      <p class="rc-deity">Deity: Rudra · Colour: Rakta (red)</p>
+    </div>
+    <div class="rasa-card">
+      <div class="rc-head"><span class="rc-sanskrit">वीर</span><span class="rc-roman">Vīra</span></div>
+      <div class="rc-sthayibhava">Sthāyibhāva: Utsāha</div>
+      <p>Heroic; martial, generous, steadfast, compassionate modes.</p>
+      <p class="rc-deity">Deity: Indra · Colour: Gaura (golden)</p>
+    </div>
+    <div class="rasa-card">
+      <div class="rc-head"><span class="rc-sanskrit">भयानक</span><span class="rc-roman">Bhayānaka</span></div>
+      <div class="rc-sthayibhava">Sthāyibhāva: Bhaya</div>
+      <p>Fearful; threat, darkness, the fearsome and unknown.</p>
+      <p class="rc-deity">Deity: Kāla · Colour: Kṛṣṇa (black)</p>
+    </div>
+    <div class="rasa-card">
+      <div class="rc-head"><span class="rc-sanskrit">बीभत्स</span><span class="rc-roman">Bībhatsa</span></div>
+      <div class="rc-sthayibhava">Sthāyibhāva: Jugupsā</div>
+      <p>Disgust; the repulsive, the foul, the impure.</p>
+      <p class="rc-deity">Deity: Mahākāla · Colour: Nīla (blue)</p>
+    </div>
+    <div class="rasa-card">
+      <div class="rc-head"><span class="rc-sanskrit">अद्भुत</span><span class="rc-roman">Adbhuta</span></div>
+      <div class="rc-sthayibhava">Sthāyibhāva: Vismaya</div>
+      <p>Wonder; the marvellous, supernatural, extraordinary.</p>
+      <p class="rc-deity">Deity: Brahma · Colour: Pīta (yellow)</p>
+    </div>
+  </div>
+
+  <h3>3.10 The Taxonomy as a Complete Set: The Tradition's Own Argument for Completeness</h3>
+  <p>A question this paper must address rather than assume an answer to is whether the
+  eight sthāyibhāvas constitute a complete, principled taxonomy of the human affective
+  field, or merely a culturally and historically contingent selection that happened to
+  suit Bharata's dramaturgical purposes. The Nāṭyaśāstra itself does not offer an
+  explicit completeness-proof in the manner a modern systematic psychology might attempt;
+  but the later tradition, particularly in Viśvanātha's and Jagannātha's theoretical
+  writings, offers an implicit argument from exhaustive pairwise opposition: the eight
+  sthāyibhāvas can be organised into four pairs of structurally opposed orientations —
+  rati (attraction toward) opposed to jugupsā (aversion from); utsāha (forward-moving
+  confidence) opposed to bhaya (forward-blocking dread); hāsa (delighted, light
+  affirmation of incongruity) opposed to krodha (outraged, heavy rejection of
+  violation); vismaya (orientation toward the unexpected-and-welcome) opposed to śoka
+  (orientation toward the expected-and-lost) — and this four-axis structure, whether or
+  not it was explicitly in Bharata's mind, gives the taxonomy a structural completeness
+  that a merely arbitrary list of eight items would lack. This paper does not claim this
+  four-axis reconstruction is textually explicit in the Nāṭyaśāstra; it offers it as the
+  most charitable and most theoretically illuminating account available of why eight,
+  and why these eight, recur with such stability across the subsequent millennium of
+  Sanskrit aesthetic theory.</p>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-4">IV.</h1>
+  <h2 class="sectiontitle">The Thirty-Three Vyabhicāribhāvas: Second-Order Differentiation</h2>
+
+  <h3>4.1 Why Thirty-Three: The Logic of Subsidiary Differentiation</h3>
+  <p>If the eight sthāyibhāvas constitute the affective field's primary differentiation —
+  the bheda-operation's first cut across the previously undivided continuum of feeling —
+  the thirty-three vyabhicāribhāvas constitute a necessary second-order differentiation:
+  the recognition that no sthāyibhāva occurs in dramatic representation (or, this paper
+  argues, in lived experience) as a pure, undifferentiated, monolithic state, but is
+  always inflected, modulated, and textured by transient affective colourations that rise
+  and subside within the sthāyibhāva's overall arc without displacing it. This is a
+  structurally identical move to the one Part Three's Section 2.3 documented for the
+  Sāmavedic accent-system: just as the three-accent skeleton proved insufficient by
+  itself and required the supplementary apparatus of svarabhaktis and vikāras, the
+  eight-sthāyibhāva skeleton proves insufficient by itself and requires the supplementary
+  apparatus of the thirty-three vyabhicāribhāvas to achieve the fine-grained
+  affective specification dramatic representation requires.</p>
+
+  <h3>4.2 The Full Enumeration</h3>
+  <p>The Nāṭyaśāstra's Chapter VII enumerates the thirty-three vyabhicāribhāvas with a
+  precision this paper preserves in full rather than abbreviating, since the specific
+  content of the list — not merely its existence — is what establishes the fineness of
+  the tradition's affective differentiation. The thirty-three are: nirveda
+  (despondency), glāni (weakness, debility), śaṅkā (apprehension, suspicion), asūyā
+  (envy, intolerance of another's excellence), mada (intoxication), śrama (fatigue),
+  ālasya (indolence), dainya (depression, wretchedness), cintā (anxious reflection),
+  moha (delusion, bewilderment), smṛti (recollection), dhṛti (firmness, fortitude),
+  vrīḍā (shame, bashfulness), capalatā (fickleness, agitation), harṣa (joy, delight),
+  āvega (agitation, excitement), jāḍya (stupor, numbness), garva (pride, arrogance),
+  viṣāda (despair), autsukya (impatience, eagerness), nidrā (sleep), apasmāra
+  (epilepsy, loss of memory), supta (dreaming), vibodha (awakening), amarṣa
+  (indignation), avahittha (dissimulation, concealment of feeling), ugratā (ferocity,
+  violence), mati (assurance, conviction), vyādhi (sickness), unmāda (madness), maraṇa
+  (death — represented dramatically, the dying state rather than death itself), trāsa
+  (fright, alarm), and vitarka (deliberation, doubt).</p>
+
+  <h3>4.3 The Logic of Cross-Cutting Distribution</h3>
+  <p>The theoretically significant feature of this list, beyond its sheer number, is its
+  distributional logic: no single vyabhicāribhāva is restricted to a single sthāyibhāva.
+  Smṛti (recollection), for instance, can qualify śṛṅgāra (recollection of the beloved
+  in their absence, intensifying vipralambha), karuṇa (recollection of the deceased,
+  intensifying grief), or even hāsya (recollection of a past comic incident, prompting
+  renewed laughter) — and which sthāyibhāva a given instance of smṛti is serving is
+  determined not by the vyabhicāribhāva itself but by the surrounding vibhāva-anubhāva
+  configuration in which it occurs. This cross-cutting distribution is precisely the
+  feature that makes the vyabhicāribhāvas genuinely subsidiary rather than merely a
+  second tier of sthāyibhāvas: a sthāyibhāva, by the Nāṭyaśāstra's own definition,
+  dominates and organises an entire dramatic sequence (an entire act, or even an entire
+  play, can be organized around a single governing sthāyibhāva), while a
+  vyabhicāribhāva arises, modulates its host sthāyibhāva, and subsides, often within a
+  single scene or even a single verse, without ever achieving comparable structural
+  dominance.</p>
+
+  <h3>4.4 Vyabhicāribhāva and the Citta-Saṃskāra Model</h3>
+  <p>This paper's account of the vyabhicāribhāvas' psychological function draws directly
+  on Part Three's citta-saṃskāra model (Section VI of that paper): the
+  thirty-three vyabhicāribhāvas are best understood as naming the most commonly
+  recurring, most reliably recognisable transient activations of the citta-substrate —
+  the affective "textures" that recur across a sufficiently wide range of human
+  experience to have become, through long observation (the Nāṭyaśāstra's own
+  methodology, per its repeated appeals to lokadharmī, observed worldly behaviour, as a
+  source for its taxonomies), stable enough to be named, catalogued, and assigned a
+  determinate dramaturgical function. That the list contains exactly thirty-three rather
+  than some other number is, on this account, not arithmetically or numerologically
+  motivated (unlike, for instance, certain other Sanskrit enumerations that hew to
+  cosmologically significant numbers) but is rather the empirical yield of the
+  tradition's own observational and dramaturgical practice — the number of distinct,
+  reliably recurring transient affective textures the tradition's accumulated theatrical
+  experience had, by the time of the Nāṭyaśāstra's compilation, found it useful to
+  name.</p>
+
+  <table class="datatable">
+    <caption>Representative Vyabhicāribhāva-Sthāyibhāva Cross-Mappings</caption>
+    <tr><th>Vyabhicāribhāva</th><th>Primary Sthāyibhāva Affinity</th><th>Secondary Affinities</th><th>Dramaturgical Function</th></tr>
+    <tr><td>Smṛti (recollection)</td><td>Rati (in vipralambha-śṛṅgāra)</td><td>Śoka, Hāsa</td><td>Intensifies longing through recalled presence; intensifies grief through recalled loss</td></tr>
+    <tr><td>Āvega (agitation)</td><td>Bhaya</td><td>Krodha, Raudra precursor states</td><td>Marks the rising edge of an emotion before its anubhāvas fully stabilise</td></tr>
+    <tr><td>Avahittha (concealment)</td><td>Rati</td><td>Vrīḍā, dramatic irony generally</td><td>Produces dramatic tension between displayed and felt state; central to nāyikā characterisation</td></tr>
+    <tr><td>Unmāda (madness)</td><td>Śoka (grief-madness)</td><td>Rati (love-madness)</td><td>Marks the extremity of a sthāyibhāva's intensification, often near a scene's climax</td></tr>
+    <tr><td>Nirveda (despondency)</td><td>Karuṇa</td><td>Śānta (Section IX below)</td><td>The principal bridge-vyabhicāribhāva between karuṇa and the contested ninth rasa, śānta</td></tr>
+  </table>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-5">V.</h1>
+  <h2 class="sectiontitle">Vibhāva and Anubhāva in Dramaturgical Practice: The Synthesis of Word, Song, and Gesture</h2>
+
+  <h3>5.1 The Four Abhinayas as the Technical Means of Anubhāva-Production</h3>
+  <p>Section 2.3 identified anubhāva as the perceptible consequent through which an
+  internal sthāyibhāva becomes available to audience-perception, and noted that the
+  Nāṭyaśāstra's four-fold classification of abhinaya — āṅgika (bodily), vācika
+  (verbal), sāttvika (psychophysiological), āhārya (costume and external
+  ornamentation) — constitutes the technical apparatus for anubhāva-production. The
+  present section examines how these four abhinayas function jointly, in a single
+  dramatic moment, to constitute what the Nāṭyaśāstra and later tradition call
+  sāmagrī — the complete, integrated sensory presentation through which a sthāyibhāva
+  becomes maximally available to the spectator's recognition and, on the theories
+  examined in Sections VI and VII, to the spectator's own aesthetic relishing.</p>
+
+  <p>Āṅgika-abhinaya, bodily representation, is itself subdivided by the Nāṭyaśāstra
+  (Chapters VIII through XII) into an extraordinarily granular taxonomy: separate
+  chapters treat the movements of the head (śiro-bheda, thirteen varieties), the
+  glances of the eye (dṛṣṭi-bheda, thirty-six varieties further subdivided by rasa-
+  appropriateness), the movements of the eyebrows, nose, cheeks, lips, chin, and neck,
+  and — in the material this paper's companion-platform resource on the 108 karaṇas
+  has already mapped extensively — the combined movements of the limbs into karaṇas
+  (the 108 basic movement-units) and aṅgahāras (sequences of karaṇas). This granularity
+  is the bodily register's direct analogue to the thirty-three vyabhicāribhāvas: just as
+  the affective field requires thirty-three subsidiary categories to achieve adequate
+  differentiation, the bodily-expressive field requires dozens of named, distinct
+  movement-categories for each body-part to achieve a comparable expressive precision.</p>
+
+  <h3>5.2 Vācika-Abhinaya and the Role of Kāvya</h3>
+  <p>Vācika-abhinaya, verbal representation, integrates the Nāṭyaśāstra's rasa-theory
+  with the parallel and partly overlapping tradition of kāvya-śāstra, Sanskrit
+  poetics — a connection the present series will need to develop more fully in Part
+  Seven's treatment of the proliferation of specialised śāstras, but which must be
+  flagged here because the Nāṭyaśāstra's own chapters on language (XV through XVII,
+  treating metre, vocabulary, and the ten types of dramatic composition called
+  daśarūpaka) make clear that rasa-production through dramatic dialogue depends on
+  specifically poetic, not merely communicative, qualities of language: alaṅkāra
+  (figures of speech — simile, metaphor, and the more elaborate figures the later
+  alaṅkāra-śāstra tradition of Daṇḍin, Vāmana, and Ānandavardhana will systematise),
+  guṇa (the qualities, such as ojas — vigour, appropriate to vīra and raudra — or
+  mādhurya — sweetness, appropriate to śṛṅgāra and karuṇa — that a verbal composition
+  must possess to support its intended rasa), and rīti (the stylistic "path" or manner
+  of composition, of which the Nāṭyaśāstra and later tradition recognise several
+  regional varieties, each with characteristic rasa-affinities).</p>
+
+  <h3>5.3 Sāttvika-Abhinaya and the Limits of Technique</h3>
+  <p>Sāttvika-abhinaya — the deliberate, technically trained production of the eight
+  involuntary sāttvika-bhāvas catalogued in Section 2.4 — presents the Nāṭyaśāstra's
+  theory with its sharpest internal tension, a tension this paper does not attempt to
+  dissolve but rather treats as a genuine and productive difficulty the tradition itself
+  recognised. If the sāttvika-bhāvas are, by definition, involuntary responses that
+  arise specifically because they cannot be willed independently of the corresponding
+  internal state, how can sāttvika-abhinaya be a teachable technique — a skill an actor
+  trains, refines, and deploys at will across repeated performances of the same role?
+  The Nāṭyaśāstra's own resolution, elaborated considerably by later dramaturgical
+  commentary, distinguishes two routes to the sāttvika-bhāvas: the route of genuine,
+  technically-cultivated absorption, in which the actor's own sustained, trained
+  imaginative identification with the represented character's situation (a discipline
+  the tradition associates with what Chapter XXIV calls the actor's own internal
+  "becoming" of the role, a usage of bhāva's root sense — √bhū, becoming — directly
+  continuous with Part Three's Section 4.1 analysis of bhāva as felt-becoming rather
+  than static state) genuinely produces the involuntary response through the same
+  psychophysiological mechanism that would produce it in an ordinary, non-theatrical
+  context; and the route of purely external, mechanically reproduced simulation of the
+  response's outward signs without the underlying state — a route the tradition
+  consistently treats as inferior, less convincing, and less capable of producing
+  rasa in the spectator, for reasons Section VI's theories of rasa-production will make
+  precise.</p>
+
+  <h3>5.4 Āhārya-Abhinaya: The Externally Supplied Register</h3>
+  <p>Āhārya-abhinaya, the register of costume, makeup (particularly the elaborate
+  facial colour-coding the Nāṭyaśāstra Chapter XXI specifies, in which specific
+  pigments and patterns mark specific character-types and, by extension, the rasas
+  those character-types characteristically embody), ornamentation, and stage-properties,
+  completes the four-fold apparatus by supplying the externally fixed, non-bodily visual
+  information that frames and contextualises the other three registers. The
+  Nāṭyaśāstra's specification that certain colours (the same chromatic-rasa associations
+  catalogued in Section III's rasa-cards above) should govern costume and makeup choices
+  according to a character's dominant rasa-affiliation establishes āhārya-abhinaya as
+  the visual register's direct parallel to vācika-abhinaya's guṇa-system: both supply,
+  through means external to the performer's own bodily or vocal technique, a
+  rasa-appropriate framing that primes the spectator's perception before the
+  performer's āṅgika and sāttvika registers have even begun their work in a given
+  scene.</p>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-6">VI.</h1>
+  <h2 class="sectiontitle">Three Theories of Rasa-Production: Lollaṭa, Śaṅkuka, Bhaṭṭa Nāyaka</h2>
+
+  <h3>6.1 Bhaṭṭa Lollaṭa's Utpattivāda: Rasa as Produced and Inferred Intensification</h3>
+  <p>Bhaṭṭa Lollaṭa, the earliest commentator on the rasa-sūtra whose position survives
+  in any detail (known to us substantially through Abhinavagupta's own summary and
+  refutation of it in the Abhinavabhāratī, since Lollaṭa's original commentary does not
+  survive independently — a transmission-pattern this paper notes without further
+  comment, since it means every reconstruction of the pre-Abhinavagupta theories,
+  including this paper's, is mediated through the very theorist who ultimately
+  supersedes them), reads saṃyogāt in the sūtra as naming a strict causal-productive
+  relation: the conjunction of vibhāva, anubhāva, and vyabhicāribhāva literally produces
+  (utpādayati) rasa as an intensification (upacita, "augmented" or "heightened
+  state") of the underlying sthāyibhāva, located primarily in the represented
+  character — Rāma, in the case of the Rāmāyaṇa's dramatic adaptations — and only
+  secondarily, through the mechanism of anumāna (inference), recognised and tasted
+  by the spectator, who infers from the performance's perceptible vibhāva-anubhāva
+  configuration that the corresponding sthāyibhāva-intensified-to-rasa exists in the
+  character being represented.</p>
+
+  <p>Lollaṭa's theory has the considerable virtue of taking the sūtra's apparent causal
+  language (saṃyogāt, "from the conjunction," carries a default causal sense in
+  Sanskrit grammatical usage) at face value, and of preserving a clear, ontologically
+  straightforward account of where rasa is located: in the character (and, by a
+  secondary extension Lollaṭa also allows, in the actor who has sufficiently identified
+  with the character to actually undergo the corresponding intensified state). But the
+  theory faces an immediate and serious objection, one that subsequent theorists press
+  hard: if rasa is literally produced in and located primarily in the dramatic
+  character, what relation does the spectator bear to it? Mere inference of another's
+  emotional state is not obviously the same thing as the spectator's own aesthetic
+  pleasure (rasāsvādana, per Section VII below) — I can infer that a stranger is angry
+  without thereby tasting any rasa of raudra myself — and Lollaṭa's theory, on a literal
+  reading, struggles to explain why the spectator's relation to the inferred,
+  character-located rasa should be pleasurable, aesthetically distanced, and
+  qualitatively different from ordinary inference of another's emotional state in a
+  non-theatrical context.</p>
+
+  <h3>6.2 Śrī Śaṅkuka's Anumitivāda: Rasa as the Object of a Special Inference</h3>
+  <p>Śrī Śaṅkuka, writing probably in the ninth century and likewise known to us
+  substantially through Abhinavagupta's summary and refutation, attempts to repair
+  Lollaṭa's theory's central weakness by developing, with considerably greater
+  technical sophistication, the inferential mechanism Lollaṭa had invoked only loosely.
+  Śaṅkuka's central move is to specify that what the spectator infers is not, as in an
+  ordinary case of inferring another's emotional state from its outward signs, that
+  this particular actor (Rāma's actor, say) is actually angry — the spectator knows
+  perfectly well that the actor is not literally Rāma and is not literally experiencing
+  Rāma's historical anger — but rather something more refined: that the represented
+  character, Rāma, as represented, would be experiencing krodha given these
+  vibhāvas, where this "would be experiencing," crucially, is not undermined by the
+  spectator's simultaneous awareness that the actor before them is not literally Rāma.
+  Śaṅkuka develops an elaborate theory of citra-turaga-nyāya, the "principle of the
+  painted horse" — just as a skilfully painted horse is recognised as a horse-
+  representation without being mistaken for an actual horse, and is admired
+  specifically as a representation (the admiration directed at the skill of
+  representation itself, not merely at "horse" as a category), the spectator's
+  inference of Rāma's rasa-state is an inference directed at a skilfully accomplished
+  representation, and the pleasure taken is, on Śaṅkuka's account, substantially
+  pleasure in the skill of the representation (the actor's technical accomplishment)
+  combined with the inferred recognition of the represented emotional state.</p>
+
+  <p>Śaṅkuka's theory is a genuine advance over Lollaṭa's in that it directly addresses
+  the puzzle of why theatrical representation produces a qualitatively different
+  spectator-experience than an ordinary report of someone else's anger would; the
+  "painted horse" mechanism explains why the spectator's awareness that "this is
+  Rāma" coexists comfortably with the awareness that "this is an actor performing
+  Rāma" without either awareness cancelling the other. But Abhinavagupta's later
+  critique (Section 7.1 below) presses a serious objection: Śaṅkuka's account still
+  treats rasa-experience as fundamentally a species of inference (anumāna), a
+  cognitive operation that, in Indian epistemology generally, is a relatively
+  effortful, deliberate, willed cognitive act — and this characterisation sits badly
+  with the phenomenology of rasa-experience as the tradition otherwise describes it:
+  rasa is repeatedly described (including in the Nāṭyaśāstra's own framing language)
+  as occurring with a quality of spontaneity, immediacy, and absorption that effortful
+  inferential reasoning does not normally possess. If watching a skilled performance
+  of the Rāma-Sītā reunion scene required the spectator to actively run an inferential
+  chain — "given these vibhāvas and anubhāvas, the represented Rāma would be feeling
+  X" — the phenomenology of aesthetic absorption, in which the inferential machinery
+  if present at all operates so rapidly and pre-reflectively as to be functionally
+  invisible to introspection, becomes difficult to square with Śaṅkuka's emphasis on
+  inference as the operative mechanism.</p>
+
+  <h3>6.3 Bhaṭṭa Nāyaka's Bhuktivāda: Rasa as Relished Rather Than Produced or Inferred</h3>
+  <p>Bhaṭṭa Nāyaka, writing probably in the tenth century, breaks more sharply with
+  both predecessors by denying that rasa is either produced (Lollaṭa) or inferred
+  (Śaṅkuka) at all, and proposing instead that poetic and dramatic language possesses a
+  third, sui generis function beyond the two functions (abhidhā, direct denotation, and
+  lakṣaṇā, secondary or metaphorical signification) standardly recognised by the
+  Mīmāṃsā and grammatical traditions in which Bhaṭṭa Nāyaka was himself trained: a
+  function he calls bhāvakatva, roughly "the power of actualising" or "the power of
+  bringing-to-realisation," through which the sthāyibhāva represented in the poetic or
+  dramatic text is not merely denoted or inferred but is actually realised
+  (bhāvyamāna) in the spectator's own consciousness, stripped, in this realisation, of
+  the particular, individuating circumstances (this particular Rāma, this particular
+  Sītā, this particular forest) that attached to it in the represented narrative.</p>
+
+  <p>Having thus generalised the sthāyibhāva, freeing it from its narrative
+  particulars, Bhaṭṭa Nāyaka posits a second, distinct function, bhojakatva — "the
+  power of enabling enjoyment" or "the power of causing relishing" — through which this
+  generalised sthāyibhāva is then actually tasted or relished (bhujyamāna) by the
+  spectator as rasa, an experience Bhaṭṭa Nāyaka compares, in a move that will become
+  centrally important for Abhinavagupta's own synthesis (Section VII), to the
+  experience of bliss (ānanda) in the realisation of the inner self (ātman) described
+  in Vedāntic literature — not identical to that ultimate bliss, on Bhaṭṭa Nāyaka's own
+  more cautious formulation, but structurally analogous to it in being a form of pure,
+  object-independent, self-luminous relishing rather than an emotion directed at, or
+  inferred about, any particular external object or person.</p>
+
+  <h3>6.4 Why Each Theory Falls Short: A Summary Assessment Before Abhinavagupta</h3>
+  <p>This paper's assessment, developed in full in Section VII, is that each of the
+  three theories surveyed here captures a genuine and necessary component of the full
+  phenomenon while failing, on its own, to integrate all three components into a single
+  coherent account. Lollaṭa correctly insists that rasa is not merely an arbitrary
+  spectator-construction unconnected to anything actually represented in the
+  performance — there is a real connection between the performance's vibhāva-anubhāva
+  configuration and what the spectator experiences, and Lollaṭa's emphasis on this
+  connection should not be discarded merely because his causal-productive framing of it
+  is inadequate. Śaṅkuka correctly insists that the spectator's relation to the
+  represented rasa involves a cognitive achievement of some kind — the spectator is not
+  merely passively flooded with affect but actively, even if rapidly and
+  pre-reflectively, apprehends the performance as a skilled representation of a
+  particular affective configuration — and this cognitive dimension should not be
+  discarded merely because "inference" proves too effortful and deliberate a category
+  to capture it. Bhaṭṭa Nāyaka correctly insists that whatever is finally tasted as
+  rasa must be generalised, freed from the narrative's merely particular circumstances,
+  and that the resulting experience has a distinctively non-ordinary, self-involving
+  quality closer to certain registers of contemplative bliss than to ordinary emotional
+  response — and this generalisation-and-bliss dimension should not be discarded
+  merely because Bhaṭṭa Nāyaka's two-function (bhāvakatva/bhojakatva) machinery proves,
+  on Abhinavagupta's critique, unnecessarily baroque and insufficiently grounded in an
+  independently established theory of perception and cognition.</p>
+
+  <div class="theory-compare">
+    <div class="theory-card">
+      <div class="tc-name">Utpattivāda</div>
+      <div class="tc-school">Bhaṭṭa Lollaṭa</div>
+      <p>Saṃyoga = causal production. Rasa is an intensified sthāyibhāva located primarily
+      in the character (secondarily the identified actor), known to the spectator by
+      inference.</p>
+    </div>
+    <div class="theory-card">
+      <div class="tc-name">Anumitivāda</div>
+      <div class="tc-school">Śrī Śaṅkuka</div>
+      <p>Saṃyoga = grounds for a special inference (citra-turaga-nyāya). Rasa is the
+      inferred, admired representation of a sthāyibhāva, not the sthāyibhāva itself.</p>
+    </div>
+    <div class="theory-card">
+      <div class="tc-name">Bhuktivāda</div>
+      <div class="tc-school">Bhaṭṭa Nāyaka</div>
+      <p>Poetic language has a third function (bhāvakatva/bhojakatva) beyond denotation
+      and metaphor: it generalises the sthāyibhāva, then enables its relishing —
+      structurally analogous to, though not identical with, Vedāntic ānanda.</p>
+    </div>
+  </div>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-7">VII.</h1>
+  <h2 class="sectiontitle">Abhinavagupta and Sādhāraṇīkaraṇa: The Synthesis</h2>
+
+  <h3>7.1 Abhinavagupta's Critique of His Predecessors</h3>
+  <p>Abhinavagupta (fl. c. 975–1025 CE), the Kashmiri Śaiva philosopher whose
+  Abhinavabhāratī commentary on the Nāṭyaśāstra and whose Locana commentary on
+  Ānandavardhana's Dhvanyāloka together constitute the single most influential body
+  of work in the entire history of Sanskrit aesthetics, develops his own theory of
+  rasa-experience through a sustained critical engagement with all three predecessor
+  theories examined in Section VI — accepting genuine insights from each while arguing
+  that none, taken alone, can survive its own internal difficulties. Against Lollaṭa,
+  Abhinavagupta presses the objection already anticipated in Section 6.4: if rasa is
+  literally located in the character, the spectator's relation to it (mere inference of
+  another's state) cannot explain the spectator's own aesthetic pleasure, since
+  inferring that someone else is sad does not typically produce pleasure in the one
+  who infers it. Against Śaṅkuka, Abhinavagupta presses the phenomenological objection
+  already stated in Section 6.2: rasa-experience does not present itself, introspectively,
+  as the conclusion of an inferential process, and treating it as such mischaracterises
+  its distinctive immediacy. Against Bhaṭṭa Nāyaka, Abhinavagupta raises a more
+  technical objection rooted in his own Mīmāṃsā and grammatical training: the positing
+  of two entirely new linguistic functions (bhāvakatva and bhojakatva) beyond the
+  already-established functions of abhidhā and lakṣaṇā (and, in the related
+  dhvani-tradition Abhinavagupta is simultaneously developing through his Locana, the
+  further function of vyañjanā, suggestion) is theoretically extravagant when a more
+  economical account, building on resources the tradition already possesses, can do
+  the same explanatory work.</p>
+
+  <h3>7.2 The Positive Synthesis: Rasa as Neither Produced, Inferred, Nor Generalised-and-Relished, but Manifested</h3>
+  <p>Abhinavagupta's own positive theory turns on a distinction his philosophical
+  training in Kashmir Śaivism made readily available to him but that neither Lollaṭa,
+  Śaṅkuka, nor Bhaṭṭa Nāyaka had systematically deployed: the distinction between
+  utpatti (production, the coming-into-existence of something previously
+  non-existent) and abhivyakti or vyañjanā (manifestation, the becoming-perceptible of
+  something that was, in some sense, already present though unmanifest). On
+  Abhinavagupta's account, rasa is not produced by the vibhāva-anubhāva-vyabhicāribhāva
+  conjunction (against Lollaṭa); it is manifested by that conjunction — drawn out from
+  a latent, dispositional presence in the spectator's own citta-substrate (directly
+  continuous, this paper notes, with Part Three's Section 6.2 account of citta-
+  saṃskāras as "affective grooves" already deposited through prior experience) into
+  vivid, actual, present-tense felt experience. The vibhāva-anubhāva-vyabhicāribhāva
+  conjunction functions, on this account, the way a properly tuned instrument or a
+  correctly struck match functions: not as the originating cause that brings an effect
+  into existence from nothing, but as the precipitating condition that allows an
+  already-latent capacity to actualise.</p>
+
+  <p>What is it that is latent and gets manifested? Here Abhinavagupta draws directly
+  on the saṃskāra-theory this series has tracked since Part One: every human citta, by
+  virtue of the universally shared character of basic human affective experience
+  (Abhinavagupta's own phrase is sāmānya, the universal or generic, as opposed to the
+  viśeṣa, the particular instance), already possesses latent saṃskāras corresponding
+  to each of the sthāyibhāvas — every spectator has, somewhere in their accumulated
+  experiential history, tasted something of rati, of śoka, of krodha, of utsāha, in
+  their own particular, viśeṣa-bound, personally entangled form. What dramatic
+  representation achieves, when successful, is the manifestation of this latent,
+  universal saṃskāra-substrate in a form from which the particular, personally
+  entangling circumstances of the spectator's own past experience of that sthāyibhāva
+  have been stripped away — a process Abhinavagupta names, in the single technical term
+  for which his theory of rasa is most famous, sādhāraṇīkaraṇa, "generalisation" or
+  "universalisation," literally the rendering-common (sādhāraṇa) of what was otherwise
+  bound to particular persons, places, and times.</p>
+
+  <h3>7.3 Sādhāraṇīkaraṇa: The Mechanism of Generalisation</h3>
+  <p>Sādhāraṇīkaraṇa is the single most important technical concept this paper
+  introduces, and its mechanism deserves the most careful possible specification. When
+  a spectator watches Rāma's grief at Sītā's apparent loss, the represented grief is
+  not received by the spectator as "Rāma's grief, located in Rāma, at this specific
+  historical moment, concerning this specific woman" — were it received that way, the
+  spectator's relation to it would be either indifference (it is, after all, not the
+  spectator's own loss) or, at most, ordinary sympathetic concern of the kind one feels
+  reading a news report about a stranger's misfortune, neither of which constitutes the
+  distinctive aesthetic absorption rasa-theory is trying to explain. Nor is the grief
+  received as "my own grief" in any straightforward sense — the spectator has not
+  actually lost their own Sītā. What Abhinavagupta argues happens instead is that the
+  specific, particularising features of the represented situation (this Rāma, this
+  Sītā, this forest) function as a kind of removable scaffolding: they are necessary to
+  occasion the manifestation (a wholly abstract, propositionally stated description of
+  "loss-grief-in-general" would not move anyone, lacking the concrete vibhāva-anubhāva
+  vividness only a particular dramatic instantiation can supply), but once the
+  sthāyibhāva of śoka has been occasioned and is being manifested, the spectator's
+  actual experience is of śoka stripped of its tethering to "Rāma specifically" or "my
+  own past losses specifically" — śoka as a generalised, universal human possibility,
+  equally available to and instantiated by any subject whatever, including but not
+  limited to the spectator's own particular self.</p>
+
+  <p>This generalisation is what licenses the otherwise puzzling fact, central to
+  Section 3.4's discussion of karuṇa, that an experience whose ordinary, non-aesthetic
+  counterpart (actual grief at an actual loss) is purely painful becomes, in its
+  rasa-form, a source of pleasure (the tradition consistently affirms that all rasas,
+  including karuṇa and bhayānaka and bībhatsa, are sources of āhlāda, delight, when
+  properly tasted as rasa) — not because the dramatic representation somehow
+  anaesthetises or dilutes the painfulness of grief, but because the grief being
+  tasted is no longer "this particular loss, happening to me, with all its
+  practically entangling consequences for my future action and wellbeing" but
+  "loss-as-such, manifested vividly enough to be fully felt, yet released from the
+  practical, self-interested entanglement that makes ordinary grief painful in a way
+  that forecloses aesthetic relishing." The technical term for this released, practically
+  disentangled quality of aesthetic experience generally — not unique to rasa-theory,
+  but given its most developed treatment in precisely this context — is vyāpāra-
+  vaicitrya-śūnyatā or, more commonly in the secondary literature, simply "aesthetic
+  distance" (a term borrowed from later Western aesthetics but applied here, this paper
+  follows several Sanskritists in arguing, to a genuinely parallel structure already
+  present in Abhinavagupta's own analysis, not merely imposed retrospectively).</p>
+
+  <h3>7.4 The Ānanda-Analogy and Its Careful Limits</h3>
+  <p>Abhinavagupta, building on but substantially refining Bhaṭṭa Nāyaka's earlier
+  comparison (Section 6.3), describes rasa-experience as brahmāsvāda-sahodara —
+  "born of the same womb as," a close sibling to, the tasting (āsvāda) of Brahman — a
+  formulation whose precision matters considerably more than its rhetorical flourish.
+  Abhinavagupta does not claim rasa-experience is identical to mokṣa or to the
+  realisation of the ātman; he is explicit, in passages the later tradition (especially
+  Viśvanātha, writing perhaps three centuries afterward) takes considerable care to
+  preserve rather than collapse, that rasa-experience remains within the domain of
+  vyavahāra, ordinary worldly transactional experience, however exalted, and is
+  temporally bounded — it begins when the performance begins to manifest it and ends,
+  or at least subsides toward ordinary consciousness, when the performance ends or the
+  spectator's absorption is broken — in a way that liberation, on virtually every
+  classical Indian soteriology including the Kashmir Śaiva tradition Abhinavagupta
+  himself belongs to, is explicitly not. The structural similarity Abhinavagupta is
+  pointing to is narrower and more precise than a claim of identity: both
+  rasa-experience and brahman-realisation involve, on his analysis, a state in which
+  the ordinarily dominant subject-object, self-other distinction that structures
+  everyday consciousness is, for the duration of the state, suspended or
+  backgrounded — in rasa-experience because the sthāyibhāva has been generalised away
+  from any particular self's particular entanglements (Section 7.3); in
+  brahman-realisation because the entire structure of subject-object duality is, on
+  Advaita and Kashmir Śaiva accounts alike, ultimately sublated. The comparison
+  illuminates a shared structural feature (the suspension of ordinary self-other
+  bifurcation) without licensing the much stronger claim that rasa-experience is a
+  form of, a step toward, or a substitute for liberation — a distinction this paper
+  insists on because popular accounts of rasa-theory frequently elide it in ways
+  Abhinavagupta's own text does not support.</p>
+
+  <h3>7.5 Why Abhinavagupta's Synthesis Resolves the Three Earlier Theories' Difficulties</h3>
+  <p>Returning to the three difficulties identified in Section 6.4: Abhinavagupta
+  preserves Lollaṭa's insight that the performance's actual vibhāva-anubhāva content is
+  genuinely, causally connected to the spectator's experience — not by positing direct
+  causal production of rasa in the character, but by positing the manifestation-relation
+  through which the performance's content precipitates the actualisation of an
+  already-latent saṃskāra in the spectator's own citta, a relation in which the
+  performance's specific content matters enormously (a poorly constructed vibhāva-
+  anubhāva configuration manifests nothing, or manifests only weakly and unconvincingly)
+  even though it is not, strictly, the productive cause of an entity coming into
+  existence from non-existence. Abhinavagupta preserves Śaṅkuka's insight that the
+  spectator's relation to the performance involves a genuine cognitive achievement —
+  not the effortful, deliberate cognitive act of inference, but the more immediate,
+  pre-reflective cognitive achievement of recognising the performance's content as
+  generalised rather than particular (sādhāraṇīkaraṇa is itself a cognitive
+  achievement, even if a rapid and largely automatic one, continuous with ordinary
+  perceptual and conceptual processing rather than requiring the effortful syllogistic
+  structure Śaṅkuka's anumāna-framework implies). And Abhinavagupta preserves Bhaṭṭa
+  Nāyaka's insight that what is finally tasted is generalised and bliss-adjacent — this
+  is precisely the content of sādhāraṇīkaraṇa and the ānanda-analogy — without
+  requiring Bhaṭṭa Nāyaka's theoretically extravagant positing of two entirely new
+  sui generis linguistic functions, since manifestation (abhivyakti/vyañjanā) is a
+  relation the broader Indian philosophical tradition, including the dhvani-theory of
+  suggested meaning Abhinavagupta develops in his other major work, already has
+  independent resources to characterise.</p>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-8">VIII.</h1>
+  <h2 class="sectiontitle">The Sahṛdaya: Citta-Constitution and the Conditions for Rasāsvādana</h2>
+
+  <h3>8.1 Defining the Sahṛdaya</h3>
+  <p>Sahṛdaya — sa- ("with") + hṛdaya ("heart") — names, in the Sanskrit aesthetic
+  tradition's technical usage, not merely an attentive or sympathetic audience-member
+  but a spectator whose citta has achieved a specific developmental condition,
+  established through the saṃskāra-accumulating process Part Three's Section VI
+  documented for the Sāmavedic priest's lifelong musical training, that makes them
+  capable of the sādhāraṇīkaraṇa-mediated rasa-experience Section VII has just
+  reconstructed. Abhinavagupta's own definition, glossing a verse attributed to
+  Ānandavardhana's tradition, describes the sahṛdaya as one whose citta has become
+  yogyatā-sampanna — endowed with the specific fitness or competence — through
+  repeated, sustained engagement (abhyāsa, the same term Pātañjala Yoga uses for
+  disciplined practice, a terminological overlap Part Six's treatment of Yoga-śāstra
+  will need to take up directly) with poetic and dramatic works, such that their citta
+  carries within it the wide range of latent sthāyibhāva-saṃskāras (Section 7.2)
+  necessary for sādhāraṇīkaraṇa to operate successfully when a skilled performance
+  presents the appropriate vibhāva-anubhāva-vyabhicāribhāva configuration.</p>
+
+  <h3>8.2 The Sahṛdaya as Necessary Correlate, Not Optional Refinement</h3>
+  <p>The theoretical importance of the sahṛdaya-concept, for this paper's larger
+  argument, is that it directly closes the second of the three limits Part Three's
+  Section 9.1 identified in the Sāma tradition's affective technology: the absence of a
+  theory of the recipient as a distinct theoretical object, considered independently of
+  the performer's training. Abhinavagupta's theory makes the spectator's own
+  citta-constitution a strict, non-optional precondition for rasa-experience, not a
+  mere enhancement that improves an experience that would occur regardless: without a
+  sufficiently saṃskāra-rich citta — without, that is, the prior accumulated aesthetic
+  and experiential history that gives the spectator latent access to the relevant
+  sthāyibhāvas in generalised form — the same flawless vibhāva-anubhāva-vyabhicāribhāva
+  performance that produces rasa in a properly prepared sahṛdaya will produce, in an
+  unprepared spectator (Abhinavagupta's own term is occasionally vimukha,
+  "averted-faced," or simply abhāvuka, "lacking in the capacity"), at most a flattened,
+  merely informational registration of "this character is sad" without the generalised,
+  absorbed, pleasurable tasting that constitutes rasa proper. This is, in this paper's
+  vocabulary, the precise dramaturgical-aesthetic analogue of Part Three's Section 6.3
+  observation that the same Sāman performed by an insufficiently trained priest fails
+  to achieve the affective precision the ritual context requires — except that the
+  present case locates the necessary training not in the performer alone but, with equal
+  or greater weight, in the audience.</p>
+
+  <h3>8.3 The Social and Pedagogical Implications: Aesthetic Education as Citta-Formation</h3>
+  <p>This theory carries a consequence the Sanskrit aesthetic tradition draws explicitly
+  and that this paper makes explicit in turn: if rasa-experience strictly requires a
+  sufficiently formed sahṛdaya-citta, then aesthetic education — the deliberate,
+  sustained cultivation of a citta capable of sādhāraṇīkaraṇa-mediated rasa-tasting
+  through structured exposure to kāvya and nāṭya — is not a peripheral cultural
+  nicety but a strict precondition for an entire domain of human experience (rasa
+  itself) to be available to a given person at all. The later tradition's elaborate
+  systems of training for both performers and connoisseurs (the courts of medieval
+  India maintained, alongside companies of actors and musicians, communities of
+  literary and dramatic critics whose accumulated sahṛdaya-formation was itself
+  treated as a form of expertise comparable to, though categorically distinct from,
+  technical performance-skill) reflects this strict-precondition structure rather than
+  a merely contingent cultural preference for connoisseurship. This paper notes, without
+  developing the point further here since it belongs more properly to Part Six's
+  treatment of disciplined self-cultivation, that the sahṛdaya's formation through
+  abhyāsa stands in the same general structural relationship to rasa-capacity that
+  Pātañjali's eight-limbed yoga stands to samādhi-capacity: in both cases, a capacity
+  initially unavailable to an untrained citta becomes available only through sustained,
+  specifically structured practice, and in both cases the practice works by
+  progressively reshaping the citta-substrate itself rather than by supplying new
+  external objects of experience.</p>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-9">IX.</h1>
+  <h2 class="sectiontitle">Śānta and the Ninth Rasa Controversy</h2>
+
+  <h3>9.1 The Textual Problem</h3>
+  <p>Bharata's Nāṭyaśāstra, in its core verses (Chapter VI), explicitly and numerically
+  enumerates eight rasas — the text states the number aṣṭau ("eight") directly, leaving
+  little room for an additive ninth within the chapter's own internal arithmetic. Yet
+  the received text of the Nāṭyaśāstra also contains, in material most scholars
+  (following the analysis of V. Raghavan and others) regard as a later interpolation or
+  at minimum a passage in tension with the chapter's main enumeration, a treatment of
+  śānta (tranquillity, peace), grounded in the sthāyibhāva of śama, as a possible ninth
+  rasa. This textual tension generated one of the longest-running controversies in the
+  history of Sanskrit aesthetics, occupying theorists from at least the tenth century
+  (the question is already alive in Ānandavardhana's and Abhinavagupta's milieu) through
+  the seventeenth-century systematisations of Jagannātha Paṇḍitarāja and beyond.</p>
+
+  <h3>9.2 The Case Against Śānta as a Rasa</h3>
+  <p>The case against admitting śānta rests on an argument with real structural force:
+  every one of the original eight rasas, on the Nāṭyaśāstra's own account, requires
+  vibhāvas (Section 2.2) — external, dramatically presentable determinant-causes that
+  occasion the sthāyibhāva's arousal — and anubhāvas (Section 2.3) — external,
+  perceptible consequent-effects through which the sthāyibhāva becomes visible to an
+  audience. Śama, the proposed ninth sthāyibhāva, is definitionally a state of
+  withdrawal from worldly engagement, desirelessness, and equanimity — and a state so
+  defined seems almost to resist having determinate external vibhāvas and anubhāvas in
+  the way the other eight straightforwardly do: what, after all, would count as the
+  uddīpana-vibhāva (the intensifying circumstance, Section 2.2) for tranquillity, when
+  tranquillity is precisely the state of no longer being moved by external
+  circumstance? And what anubhāva would reliably and visibly externalise a state whose
+  defining character is inward withdrawal rather than outward expression? Bhoja and
+  several other theorists who resist śānta's admission press exactly this objection:
+  a rasa requires the full vibhāva-anubhāva-vyabhicāribhāva apparatus to be
+  dramaturgically realisable, and śānta's very nature as a sthāyibhāva seems to
+  undercut the possibility of supplying that apparatus in the ordinary way.</p>
+
+  <h3>9.3 The Case for Śānta and Abhinavagupta's Resolution</h3>
+  <p>Abhinavagupta, along with the Vaiṣṇava and Śaiva devotional aesthetic traditions
+  that develop after him (the question becomes acute again, for different reasons,
+  in the Gauḍīya Vaiṣṇava tradition's eventual addition of bhakti as a possible tenth
+  rasa — a development belonging more properly to Part Nine's treatment of
+  mantra-śāstra and devotional practice, but flagged here as a continuation of
+  exactly the present controversy's structure), defends śānta's admission on grounds
+  that directly draw on Section VII's account of rasa's relationship to ānanda.
+  Abhinavagupta's argument is that śānta is not merely admissible as a ninth rasa but
+  is, in an important structural sense, the foundational or limiting rasa toward which
+  the other eight all tend: since rasa-experience in general involves (Section 7.3) a
+  generalisation away from the particularising, self-interested entanglements of
+  ordinary emotional experience, and since śama names precisely the state of having
+  transcended such entanglement altogether, śānta can be understood as the rasa whose
+  sthāyibhāva is the very condition — non-attachment, equanimity — that
+  sādhāraṇīkaraṇa's generalising operation approximates in producing each of the
+  other eight rasas. On this reading, the objection that śānta lacks determinate
+  vibhāvas and anubhāvas is met by specifying a distinctive vibhāva-set appropriate
+  to its distinctive character: the impermanence of worldly things (anityatā), the
+  example of ascetics and sages, scenes of renunciation and detachment — and a
+  distinctive anubhāva-set including a steady, unagitated gaze, a peaceful
+  countenance, and freedom from the visible agitation that marks the other eight
+  rasas' characteristic anubhāvas, the very absence of agitation here functioning,
+  paradoxically but coherently, as śānta's own positive anubhāva.</p>
+
+  <h3>9.4 This Paper's Position</h3>
+  <p>This paper follows Abhinavagupta's resolution as the philosophically more complete
+  position, while registering — in keeping with the series' general commitment to
+  even-handed treatment of genuine scholarly and traditional controversy — that the
+  question was never fully settled within the tradition itself, that important
+  theorists (Bhoja prominent among them) continued to reject śānta's rasa-status on
+  the grounds stated in Section 9.2, and that the eight-rasa and nine-rasa
+  enumerations both remain in active use across different strands of the later
+  tradition, including in the Yoga-śāstra-adjacent literature Part Six will engage,
+  where śānta's centrality to a contemplative rather than dramaturgical context makes
+  its rasa-status considerably less contested than in the original Nāṭyaśāstra
+  context.</p>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-10">X.</h1>
+  <h2 class="sectiontitle">Rasa, Bheda, and Categorical Perception: Closing the Series' Theoretical Circle</h2>
+
+  <h3>10.1 Restating the Series' Core Claim in Rasa's Terms</h3>
+  <p>Part Two established that bheda is the general cognitive procedure by which an
+  undivided continuum becomes a set of discrete, nameable units available to awareness
+  and memory, documenting this structure across phonemic, chromatic, object-individuating,
+  and soteriological domains. Part Three extended the structure to the affective field,
+  documenting the Sāma Veda's three-accent system as the affective domain's minimal
+  bheda-apparatus. The present paper's account of sādhāraṇīkaraṇa (Section VII) reveals
+  that rasa-theory performs a bheda-operation of a distinctive, reflexively structured
+  kind not yet encountered elsewhere in the series: where Part Two's phonemic bheda cuts
+  an external acoustic continuum into discrete categories, and Part Three's tonal bheda
+  cuts an external pitch-continuum into discrete affective-tonal categories, rasa-theory's
+  sādhāraṇīkaraṇa cuts the spectator's own internal, already-individuated, biographically
+  particular emotional history away from its particularising entanglements, producing a
+  generalised affective category (the sthāyibhāva-as-rasa) that is, paradoxically, both
+  newly discriminated (separated out from the spectator's own undifferentiated mass of
+  personal emotional memory) and newly de-individuated (stripped of the very
+  particularity that ordinary bheda-operations, in Part Two's account, typically
+  preserve and even constitute).</p>
+
+  <h3>10.2 The Precise Parallel with Categorical Perception</h3>
+  <p>This paper proposes that the precise structural analogue, within the empirical
+  categorical-perception literature this series has drawn on throughout, is not the
+  ordinary case of phonemic or chromatic category-formation (where a perceiver learns
+  to sort external stimuli into categories that remain, after sorting, categories of
+  external stimuli) but the more specialised phenomenon of emotion-concept abstraction:
+  the well-documented developmental and cross-cultural psychological finding that human
+  beings, across sufficiently varied emotional experiences, develop abstracted emotion-
+  concepts (a general concept of "sadness," available for application to indefinitely
+  many particular instances, rather than merely a string of unconnected particular
+  sad-episodes) through a process structurally analogous to ordinary categorical
+  perception's stimulus-generalisation, except that the relevant "stimuli" being sorted
+  into categories are, in this case, the perceiver's own internal affective episodes
+  rather than external perceptual inputs. Rasa-theory's sādhāraṇīkaraṇa, on this
+  reading, is the Sanskrit aesthetic tradition's sophisticated, dramaturgically-applied
+  account of exactly this reflexive, internally-directed bheda-operation: the
+  performance functions as a precisely calibrated external stimulus whose specific
+  function is to trigger the spectator's own pre-existing capacity for emotion-concept
+  abstraction, manifesting (Section 7.2) the abstracted, generalised sthāyibhāva-concept
+  in vivid, currently-felt form rather than merely activating it as a cool, propositional
+  category-judgment the way an ordinary case of concept-application might.</p>
+
+  <h3>10.3 Rasāsvādana as the Most Refined Achievable Instance of Bheda</h3>
+  <p>This paper's strongest claim in the present section, offered as this series'
+  developing theoretical core rather than as an uncontroversial textual reading
+  straightforwardly available in either the Nāṭyaśāstra or the Abhinavabhāratī, is that
+  rasāsvādana represents, within the developmental sequence Parts Two through Four have
+  traced, the most refined achievable instance of the bheda-operation: an instance in
+  which the operation has turned fully reflexive, applying itself not to an external
+  continuum (sound, light, the boundary between self and not-self) but to the
+  perceiving subject's own prior history of bheda-operations (the accumulated,
+  particularised saṃskāras left by every prior instance of having felt rati, śoka,
+  krodha, and the rest), producing from that history a further, second-order
+  discrimination — the generalised sthāyibhāva — that is simultaneously a culmination of
+  everything the bheda-operation has been doing since Part Two's phonemic starting-point
+  and a genuinely novel achievement not reducible to any single one of its
+  predecessors. The aesthetic pleasure (āhlāda) the tradition consistently associates
+  with successful rasa-tasting is, on this account, not an incidental or merely
+  hedonic add-on to the cognitive achievement of sādhāraṇīkaraṇa, but is partly
+  constituted by the distinctive satisfaction — itself worth comparing, though this
+  paper does not develop the comparison at length, to the documented pleasure
+  associated with successful categorisation and pattern-recognition more generally in
+  the cognitive-psychological literature — of achieving this unusually difficult,
+  reflexively-directed act of discrimination.</p>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-11">XI.</h1>
+  <h2 class="sectiontitle">Limits and the Forward Problem</h2>
+
+  <h3>11.1 What Abhinavagupta's Synthesis Leaves Unresolved</h3>
+  <p>Methodological integrity, exercised in Part Three's Section IX and continued here,
+  requires this paper to specify what even Abhinavagupta's synthesis — judged in
+  Section VII the most philosophically complete of the available historical positions —
+  does not fully resolve, and what therefore remains a genuine task for Part Five's
+  treatment of abhinaya rather than a redundant repetition of the present paper's
+  ground. Three limits are worth specifying precisely.</p>
+
+  <p>The first limit concerns the actor's own experience, a question this paper has
+  touched on (Section 5.3) but not resolved: does the actor, in the moment of
+  successful sāttvika-abhinaya, undergo rasāsvādana in the same sense the sahṛdaya-
+  spectator does, or does the actor's experience belong to a structurally different
+  category — perhaps closer to Lollaṭa's original, character-located account
+  (Section 6.1) than to Abhinavagupta's spectator-centred manifestation-theory? The
+  Nāṭyaśāstra's own text is not fully unambiguous on this point, and the later
+  tradition divides on it; this paper flags the question as unresolved rather than
+  adjudicating it, since its resolution depends on embodied, technique-level
+  considerations about the actor's training that belong more properly to Part Five's
+  domain.</p>
+
+  <p>The second limit concerns the precise mechanism — left at the level of analogy
+  rather than detailed mechanism in Section 7.2 — by which a dramatic performance's
+  external vibhāva-anubhāva configuration actually triggers manifestation of a latent
+  citta-saṃskāra. Abhinavagupta's account specifies that this happens, but the
+  fine-grained "how" — what precisely makes one performance's anubhāva-configuration
+  successful in triggering manifestation while an ostensibly similar but less skilled
+  performance fails to do so — is a question the text addresses through accumulated
+  practical and critical wisdom (the entire later tradition of nāṭaka-criticism and
+  performance-evaluation) rather than through a single, theoretically complete
+  mechanism-specification. Part Five's detailed treatment of the actual embodied
+  technique of abhinaya — the karaṇas, the specific gestural vocabulary, the trained
+  precision of āṅgika-abhinaya — is, on this paper's account, exactly the place where
+  this second limit's resolution becomes available, since it is at the level of
+  specific, trained bodily technique that the difference between a successful and an
+  unsuccessful manifestation-triggering performance is actually decided.</p>
+
+  <p>The third limit concerns the relationship between rasa-theory's individual,
+  spectator-by-spectator account of rasāsvādana and the evidently social, collective
+  character of actual theatrical performance, in which many spectators simultaneously
+  witness the same performance: does each spectator's rasāsvādana occur in strict
+  isolation, a separate manifestation-event in each separate citta, or does the
+  collective, co-present character of theatrical audience-experience itself contribute
+  something to the rasa-experience that an isolated, single-spectator viewing would
+  lack? The Nāṭyaśāstra's own extensive material on theatre architecture, audience
+  seating by class and type, and the social occasion of dramatic performance
+  (Chapters II through V) suggests the tradition took the collective dimension
+  seriously as a practical matter without fully theorising its relationship to the
+  individually-pitched account of rasāsvādana that Chapter VI and the later
+  philosophical commentary develop. This paper leaves the question open as a
+  genuine gap rather than a manufactured one.</p>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-12">XII.</h1>
+  <h2 class="sectiontitle">Forward to Part Five: From Rasa to Abhinaya</h2>
+
+  <h3>12.1 What This Paper Has Established</h3>
+  <p>The present paper has developed twelve results at a depth exceeding Part Three's,
+  per this series' governing instruction. First, it has examined the Nāṭyaśāstra's
+  four-Veda origin-narrative and resolved the apparent puzzle of rasa's assignment to
+  the Atharvaveda rather than the Sāmaveda, showing this assignment to register a
+  coherent distinction between rasa-as-synthesis and gīta-as-ingredient. Second, it has
+  developed a full philological reading of Bharata's rasa-sūtra, specifying each
+  technical term (vibhāva, anubhāva, vyabhicāribhāva, sāttvika-bhāva, saṃyoga,
+  niṣpatti) with the precision the seven-century commentarial tradition's disagreements
+  require. Third, it has treated each of the eight rasas individually, with full
+  vibhāva-anubhāva-vyabhicāribhāva specification, iconographic detail, and an
+  argument for the taxonomy's principled rather than arbitrary completeness. Fourth, it
+  has catalogued and analysed the thirty-three vyabhicāribhāvas as a second-order
+  differentiation structurally parallel to Part Three's svarabhakti-vikāra apparatus.
+  Fifth, it has examined the four abhinayas as the technical means of anubhāva-
+  production, with particular attention to the unresolved tension within sāttvika-
+  abhinaya between genuine absorption and external simulation. Sixth, it has
+  reconstructed in full the three pre-Abhinavagupta theories of rasa-production —
+  Lollaṭa's utpattivāda, Śaṅkuka's anumitivāda, Bhaṭṭa Nāyaka's bhuktivāda — as
+  substantive positions each capturing a genuine component of the phenomenon. Seventh,
+  it has developed Abhinavagupta's synthesis in full, centred on sādhāraṇīkaraṇa as
+  manifestation rather than production or inference, and on the carefully bounded
+  ānanda-analogy. Eighth, it has examined the sahṛdaya as the necessary recipient-
+  correlate that closes the second of Part Three's three acknowledged limits. Ninth, it
+  has reconstructed the śānta controversy in full, defending Abhinavagupta's resolution
+  while preserving the genuine force of the opposing position. Tenth, it has drawn the
+  precise parallel between rasāsvādana and emotion-concept abstraction within the
+  categorical-perception framework this series has developed since Part Two,
+  proposing rasāsvādana as the most refined achievable instance of reflexively-directed
+  bheda. Eleventh, it has specified three genuine limits — the actor's own experiential
+  status, the fine-grained mechanism of manifestation-triggering, and the
+  individual/collective relationship — that Abhinavagupta's synthesis leaves open.
+  Twelfth, in the present section, it executes the handoff to Part Five.</p>
+
+  <h3>12.2 The Handoff to Part Five</h3>
+  <p>Part Five — <em>Nāṭyaśāstra II: Abhinaya and Embodied Expression</em> — will take up,
+  as its central task, exactly the second limit identified in Section 11.1: the detailed,
+  technical, embodied mechanism by which a performer's trained body produces the
+  anubhāvas and sāttvika-bhāvas that Section II of the present paper has specified only
+  at the level of category and function. Three contributions from the present paper feed
+  directly into Part Five's argument. First, the four-fold abhinaya-classification
+  developed in Section V — āṅgika, vācika, sāttvika, āhārya — provides the structural
+  framework within which Part Five's detailed treatment of gestural technique
+  (including direct integration with the platform's existing 108-karaṇas resource) will
+  proceed. Second, the unresolved tension within sāttvika-abhinaya between genuine
+  absorption and external simulation (Section 5.3) becomes Part Five's central
+  problem: what, at the level of actual trained technique rather than theoretical
+  description, distinguishes a performance that achieves genuine sāttvika absorption
+  from one that merely simulates its outward signs. Third, the open question of the
+  actor's own rasāsvādana-status (Section 11.1) will require Part Five to develop, for
+  the first time in this series, a theory of skilled embodied practice as itself a mode
+  of citta-cultivation, anticipating themes Part Six's treatment of Yoga-śāstra will
+  develop more fully still.</p>
+
+  <div class="context-box">
+    <h3>Preview of Part Five: Nāṭyaśāstra II — Abhinaya and Embodied Expression</h3>
+    <p>Part Five will examine the Nāṭyaśāstra's theory of abhinaya as the embodied,
+    technically trained dimension of the rasa-producing synthesis this paper has
+    reconstructed at the conceptual level. Five themes will dominate Part Five's
+    analysis: the detailed taxonomy of āṅgika-abhinaya including the 108 karaṇas and
+    their combination into aṅgahāras; the actor's training (the Nāṭyaśāstra's own
+    extended treatment of the required physical, vocal, and temperamental qualities of
+    a successful performer); the technique-versus-absorption problem within sāttvika-
+    abhinaya left open in the present paper's Section 5.3 and Section 11.1; the
+    relationship between abhinaya and the Bhāratanāṭyam and other classical dance
+    traditions' subsequent systematisation of the Nāṭyaśāstra's gestural vocabulary into
+    distinct technical lineages; and the preparation of the handoff to Part Six's
+    treatment of Yoga-śāstra's citta-vṛtti, in which the actor's disciplined embodied
+    practice will be examined as a specific instance of the more general psychology of
+    sustained attentional and behavioural discipline.</p>
+  </div>
+
+  <blockquote class="pull">
+    A phoneme divides sound into meaning. A Sāma Veda accent divides sound into feeling.
+    A rāga divides feeling into specific, named, cultivatable aesthetic forms. And a rasa
+    divides aesthetic experience into universally recognisable, impersonally transmitted,
+    personally resonant forms of human being — not by producing what was not, nor by
+    inferring what is hidden, but by manifesting, in a citta already secretly carrying
+    it, what was there all along, waiting only for the occasion of art to become visible
+    to itself.
+    <span class="attrib">Series B · Editorial Framework</span>
+  </blockquote>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <section id="footnotes">
+    <h2 class="sectiontitle" style="font-size:22px;">Footnotes</h2>
+    <ol class="footnotes">
+      <li><sup>1</sup> On the Nāṭyaśāstra's origin-narrative and the four-Veda extraction myth: Kapila Vatsyayan, <i>Bharata: The Nāṭyaśāstra</i> (New Delhi: Sahitya Akademi, 1996), pp. 1–24; and Manomohan Ghosh, trans., <i>The Nāṭyaśāstra</i>, Vol. I (Calcutta: Manisha Granthalaya, 1967), Chapter I.</li>
+      <li><sup>2</sup> On the Atharvaveda's performative and effect-producing character: William Dwight Whitney, trans., <i>Atharva-Veda Saṃhitā</i>, Harvard Oriental Series 7–8 (Cambridge, MA: Harvard University Press, 1905), Introduction; and Maurice Bloomfield, <i>Hymns of the Atharva-Veda</i> (Oxford: Clarendon Press, 1897).</li>
+      <li><sup>3</sup> On the rasa-sūtra and its grammatical structure: J. L. Masson and M. V. Patwardhan, <i>Aesthetic Rapture: The Rasādhyāya of the Nāṭyaśāstra</i>, 2 vols. (Poona: Deccan College, 1970), Vol. I, pp. 1–43.</li>
+      <li><sup>4</sup> On the eight sthāyibhāvas and their dramaturgical specification: Bharata, <i>Nāṭyaśāstra</i>, Chapters VI–VII, trans. Manomohan Ghosh, Vol. I; and Adya Rangacharya, trans., <i>The Nāṭyaśāstra</i> (New Delhi: Munshiram Manoharlal, 1996).</li>
+      <li><sup>5</sup> On hāsya and the incongruity-structure of Sanskrit comic theory compared with Western theories of humour: Lee Siegel, <i>Laughing Matters: Comic Tradition in India</i> (Chicago: University of Chicago Press, 1987).</li>
+      <li><sup>6</sup> On Bhaṭṭa Lollaṭa's utpattivāda, reconstructed via Abhinavagupta: Raniero Gnoli, <i>The Aesthetic Experience According to Abhinavagupta</i>, 2nd ed. (Varanasi: Chowkhamba Sanskrit Series, 1968), pp. 1–20.</li>
+      <li><sup>7</sup> On Śrī Śaṅkuka's anumitivāda and the citra-turaga-nyāya: Gnoli, <i>The Aesthetic Experience</i>, pp. 21–44; and Edwin Gerow, "Rasa as a Category of Literary Criticism," in <i>Sanskrit Drama in Performance</i>, ed. Rachel van M. Baumer and James R. Brandon (Honolulu: University of Hawaii Press, 1981), pp. 226–257.</li>
+      <li><sup>8</sup> On Bhaṭṭa Nāyaka's bhuktivāda and the bhāvakatva/bhojakatva distinction: Gnoli, <i>The Aesthetic Experience</i>, pp. 45–63; and V. Raghavan, <i>The Number of Rasa-s</i>, 3rd ed. (Madras: Adyar Library and Research Centre, 1975).</li>
+      <li><sup>9</sup> On Abhinavagupta's synthesis and sādhāraṇīkaraṇa: Abhinavagupta, <i>Abhinavabhāratī</i> on Nāṭyaśāstra VI, trans. and analysed in Gnoli, <i>The Aesthetic Experience</i>, pp. 64–95; and J. L. Masson and M. V. Patwardhan, <i>Śāntarasa and Abhinavagupta's Philosophy of Aesthetics</i> (Poona: Bhandarkar Oriental Research Institute, 1969).</li>
+      <li><sup>10</sup> On the brahmāsvāda-sahodara formulation and its careful limits: Gnoli, <i>The Aesthetic Experience</i>, pp. 85–95; and Daniel H. H. Ingalls, Jeffrey M. Masson, and M. V. Patwardhan, trans., <i>The Dhvanyāloka of Ānandavardhana with the Locana of Abhinavagupta</i> (Cambridge, MA: Harvard University Press, 1990), Introduction.</li>
+      <li><sup>11</sup> On the sahṛdaya concept: Sheldon Pollock, "Rasa and Dhvani in Indian Aesthetics," in <i>A Rasa Reader: Classical Indian Aesthetics</i>, ed. Sheldon Pollock (New York: Columbia University Press, 2016), pp. 1–33.</li>
+      <li><sup>12</sup> On the śānta-rasa controversy: V. Raghavan, <i>The Number of Rasa-s</i>; and Masson and Patwardhan, <i>Śāntarasa and Abhinavagupta's Philosophy of Aesthetics</i>.</li>
+      <li><sup>13</sup> On emotion-concept abstraction in contemporary affective science, as a point of comparison rather than validation: Lisa Feldman Barrett, "The theory of constructed emotion," <i>Social Cognitive and Affective Neuroscience</i> 12 (2017): 1–23; and Paul Ekman, "Basic Emotions," in <i>Handbook of Cognition and Emotion</i>, ed. Tim Dalgleish and Mick Power (Chichester: Wiley, 1999), pp. 45–60.</li>
+    </ol>
+  </section>
+
+  <div class="divider-orn">★</div>
+
+  <section id="bibliography">
+    <h2 class="sectiontitle" style="font-size:22px;">Bibliography</h2>
+    <h4 style="color:var(--ink-dim);text-transform:uppercase;letter-spacing:.06em;font-size:14px;">Primary Sources</h4>
+    <p class="dim" style="font-size:14.5px;">
+    Bharata. <i>Nāṭyaśāstra.</i> Ed. Madhusūdana Śāstrī. 4 vols. Varanasi: Chaukhamba Sanskrit Series, 1971.<br>
+    Ghosh, Manomohan, trans. <i>The Nāṭyaśāstra.</i> 2 vols. Calcutta: Manisha Granthalaya, 1967.<br>
+    Rangacharya, Adya, trans. <i>The Nāṭyaśāstra: English Translation with Critical Notes.</i> New Delhi: Munshiram Manoharlal, 1996.<br>
+    Abhinavagupta. <i>Abhinavabhāratī</i> (commentary on the Nāṭyaśāstra). Partial trans. and analysis in Gnoli (below) and Masson and Patwardhan (below).<br>
+    Ānandavardhana. <i>Dhvanyāloka</i> with the <i>Locana</i> of Abhinavagupta. Trans. Daniel H. H. Ingalls, Jeffrey M. Masson, and M. V. Patwardhan. Cambridge, MA: Harvard University Press, 1990.
+    </p>
+
+    <h4 style="color:var(--ink-dim);text-transform:uppercase;letter-spacing:.06em;font-size:14px;margin-top:24px;">Secondary Sources — Rasa Theory and Sanskrit Aesthetics</h4>
+    <p class="dim" style="font-size:14.5px;">
+    Gnoli, Raniero. <i>The Aesthetic Experience According to Abhinavagupta.</i> 2nd ed. Varanasi: Chowkhamba Sanskrit Series, 1968.<br>
+    Masson, J. L., and M. V. Patwardhan. <i>Aesthetic Rapture: The Rasādhyāya of the Nāṭyaśāstra.</i> 2 vols. Poona: Deccan College, 1970.<br>
+    Masson, J. L., and M. V. Patwardhan. <i>Śāntarasa and Abhinavagupta's Philosophy of Aesthetics.</i> Poona: Bhandarkar Oriental Research Institute, 1969.<br>
+    Raghavan, V. <i>The Number of Rasa-s.</i> 3rd ed. Madras: Adyar Library and Research Centre, 1975.<br>
+    Pollock, Sheldon, ed. <i>A Rasa Reader: Classical Indian Aesthetics.</i> New York: Columbia University Press, 2016.<br>
+    Gerow, Edwin. "Rasa as a Category of Literary Criticism." In <i>Sanskrit Drama in Performance</i>, edited by Rachel van M. Baumer and James R. Brandon, 226–257. Honolulu: University of Hawaii Press, 1981.<br>
+    Vatsyayan, Kapila. <i>Bharata: The Nāṭyaśāstra.</i> New Delhi: Sahitya Akademi, 1996.<br>
+    Siegel, Lee. <i>Laughing Matters: Comic Tradition in India.</i> Chicago: University of Chicago Press, 1987.
+    </p>
+
+    <h4 style="color:var(--ink-dim);text-transform:uppercase;letter-spacing:.06em;font-size:14px;margin-top:24px;">Secondary Sources — Comparative and Affective Science</h4>
+    <p class="dim" style="font-size:14.5px;">
+    Barrett, Lisa Feldman. "The theory of constructed emotion: an active inference account of interoception and categorization." <i>Social Cognitive and Affective Neuroscience</i> 12 (2017): 1–23.<br>
+    Ekman, Paul. "Basic Emotions." In <i>Handbook of Cognition and Emotion</i>, edited by Tim Dalgleish and Mick Power, 45–60. Chichester: Wiley, 1999.<br>
+    Whitney, William Dwight, trans. <i>Atharva-Veda Saṃhitā.</i> Harvard Oriental Series 7–8. Cambridge, MA: Harvard University Press, 1905.
+    </p>
+
+    <h4 style="color:var(--ink-dim);text-transform:uppercase;letter-spacing:.06em;font-size:14px;margin-top:24px;">Predecessor and Series Context</h4>
+    <p class="dim" style="font-size:14.5px;">
+    Cultural Musings. <i>Series B, Part One: Vāk as the Ground of Psychological Awareness.</i> shastrasvakpsychology.culturalmusings.com.<br>
+    Cultural Musings. <i>Series B, Part Two: Śabda-Bheda: The Birth of Discrimination.</i> shastrasvakpsychology-parttwo.culturalmusings.com.<br>
+    Cultural Musings. <i>Series B, Part Three: Sāma Veda and the Birth of Affect.</i> shastrasvakpsychology-partthree.culturalmusings.com.
+    </p>
+  </section>
+
+  <div class="divider-orn">☆</div>
+
+  <section id="glossary">
+    <h2 class="sectiontitle" style="font-size:22px;">Glossary</h2>
+    <p class="dim" style="font-size:14.5px;">Technical terms introduced or substantially extended in the present paper; cross-references to Series B predecessor papers are provided for terms established there.</p>
+    <dl class="glossary">
+      <dt><span class="glossterm">रस</span> rasa</dt>
+      <dd>Aesthetic flavour, relish; the generalised, aesthetically distanced tasting of a sthāyibhāva achieved through dramatic or poetic representation. The central concept of the present paper.</dd>
+      <dt><span class="glossterm">विभाव</span> vibhāva</dt>
+      <dd>Determinant; the dramaturgically presented cause or occasion (subdivided into ālambana, the object-determinant, and uddīpana, the circumstance-determinant) that establishes a sthāyibhāva's arousal.</dd>
+      <dt><span class="glossterm">अनुभाव</span> anubhāva</dt>
+      <dd>Consequent; the outward, perceptible bodily and behavioural effect through which an aroused sthāyibhāva becomes visible to an audience.</dd>
+      <dt><span class="glossterm">सात्त्विकभाव</span> sāttvika-bhāva</dt>
+      <dd>One of eight involuntary psychophysiological responses (stambha, sveda, romāñca, svarabheda, vepathu, vaivarṇya, aśru, pralaya) treated as the most reliable evidence of genuine affective arousal.</dd>
+      <dt><span class="glossterm">व्यभिचारिभाव</span> vyabhicāribhāva</dt>
+      <dd>Transitory state; one of thirty-three subsidiary affective colourations that flow into and modulate a sthāyibhāva without themselves achieving rasa-status. Introduced in Part Three, fully catalogued here in Section IV.</dd>
+      <dt><span class="glossterm">साधारणीकरण</span> sādhāraṇīkaraṇa</dt>
+      <dd>Generalisation, universalisation; Abhinavagupta's term for the process by which a represented sthāyibhāva is stripped of its particularising narrative entanglements and manifested as a generalised aesthetic object available to any subject. The paper's central theoretical concept.</dd>
+      <dt><span class="glossterm">रसास्वादन</span> rasāsvādana</dt>
+      <dd>The tasting of rasa; the spectator's actual aesthetic-affective experience, manifested rather than produced or inferred, per Abhinavagupta's synthesis. Carried forward from Part Three's forward-gaze.</dd>
+      <dt><span class="glossterm">सहृदय</span> sahṛdaya</dt>
+      <dd>The sympathetically-hearted aesthetic recipient; a spectator whose citta has been sufficiently formed by prior aesthetic saṃskāras to be capable of sādhāraṇīkaraṇa-mediated rasāsvādana. Fully theorised in Section VIII.</dd>
+      <dt><span class="glossterm">उत्पत्तिवाद</span> utpattivāda</dt>
+      <dd>Bhaṭṭa Lollaṭa's theory that rasa is causally produced (an intensified sthāyibhāva) located primarily in the represented character.</dd>
+      <dt><span class="glossterm">अनुमितिवाद</span> anumitivāda</dt>
+      <dd>Śrī Śaṅkuka's theory that rasa is the object of a special inference, modelled on the citra-turaga-nyāya, the "principle of the painted horse."</dd>
+      <dt><span class="glossterm">भुक्तिवाद</span> bhuktivāda</dt>
+      <dd>Bhaṭṭa Nāyaka's theory that poetic language possesses sui generis functions (bhāvakatva, bhojakatva) of generalising and enabling the relishing of a sthāyibhāva.</dd>
+      <dt><span class="glossterm">शान्त</span> śānta</dt>
+      <dd>Tranquillity; the contested ninth rasa, grounded in śama, defended by Abhinavagupta as the foundational rasa toward which the other eight tend.</dd>
+    </dl>
+  </section>
+
+  <div class="divider-orn">↗</div>
+
+  <section class="preview-box">
+    <h3>Series B: Complete Part Map (Reference)</h3>
+    <table class="partmap">
+      <tr><th>Part</th><th>Title</th><th>Psychological Stage</th></tr>
+      <tr><td>I</td><td>Vāk as the Ground of Psychological Awareness</td><td>Pre-differentiated awareness</td></tr>
+      <tr><td>II</td><td>Śabda-Bheda: The Birth of Discrimination</td><td>Differentiation / discernment</td></tr>
+      <tr><td>III</td><td>Sāma Veda and the Birth of Affect</td><td>Feeling-toned cognition</td></tr>
+      <tr><td class="this-paper">IV</td><td class="this-paper">Nāṭyaśāstra I: Rasa and the Architecture of Emotion</td><td class="this-paper">This Paper · Aesthetic embodiment</td></tr>
+      <tr><td>V</td><td>Nāṭyaśāstra II: Abhinaya and Embodied Expression</td><td>Somatic cognition</td></tr>
+      <tr><td>VI</td><td>Yoga-Śāstra: Citta-Vṛtti and Disciplined Attention</td><td>Self-regulation / will</td></tr>
+      <tr><td>VII</td><td>Proliferation of Śāstra I: Vyākaraṇa, Nyāya</td><td>Specialised cognition</td></tr>
+      <tr><td>VIII</td><td>Proliferation of Śāstra II: Arthaśāstra, Āyurveda</td><td>Social/embodied extension</td></tr>
+      <tr><td>IX</td><td>Mantra-Śāstra: Vāk Returning as Sound-Technology</td><td>Recursive self-application</td></tr>
+      <tr><td>X</td><td>Case Studies in Śabda-to-Śāstra Transmission</td><td>Applied/historical synthesis</td></tr>
+      <tr><td>XI</td><td>Dharma and Adharma: The Convergent Psychology of Order</td><td>Ethical-metaphysical synthesis</td></tr>
+      <tr><td>XII</td><td>Pratiprasava: Vāk's Return and the Handoff Beyond</td><td>Closing return</td></tr>
+    </table>
+  </section>
+
+</main>
+
+<footer class="papertail">
+  <div class="om">ॐ तत् सत्</div>
+  <div class="omtatsat">om tat sat — That is Truth</div>
+  <div class="stamp">
+    <b>Series B · Part Four</b> · Nāṭyaśāstra I: Rasa and the Architecture of Emotion<br>
+    Cultural Musings · Vedic &amp; Śāstric Research Platform<br>
+    Predecessor: Series B · Part Three · shastrasvakpsychology-partthree.culturalmusings.com
+  </div>
+</footer>
+
+</body>
+</html>
